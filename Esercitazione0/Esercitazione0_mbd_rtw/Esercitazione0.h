@@ -7,10 +7,10 @@
  *
  * Code generated for Simulink model 'Esercitazione0'.
  *
- * Model version                   : 1.3
+ * Model version                   : 1.6
  * Simulink Coder version          : 9.8 (R2022b) 13-May-2022
  * MBDT for S32K1xx Series Version : 4.3.0 (R2016a-R2022a) 13-Sep-2022
- * C/C++ source code generated on  : Thu Sep 26 17:52:44 2024
+ * C/C++ source code generated on  : Tue Oct  1 16:59:36 2024
  *
  * Target selection: mbd_s32k.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -40,13 +40,17 @@
 
 /* Block signals (default storage) */
 typedef struct {
-  boolean_T DataTypeConversion;        /* '<Root>/Data Type Conversion' */
   boolean_T Digital_Input;             /* '<Root>/Digital_Input' */
+  boolean_T Digital_Input1;            /* '<Root>/Digital_Input1' */
+  boolean_T LogicalOperator6;          /* '<Root>/Logical Operator6' */
+  boolean_T LogicalOperator5;          /* '<Root>/Logical Operator5' */
+  boolean_T LogicalOperator4;          /* '<Root>/Logical Operator4' */
 } B_Esercitazione0_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  int32_T clockTickCounter;            /* '<Root>/Pulse Generator' */
+  int32_T clockTickCounter;            /* '<Root>/Pulse Generator1' */
+  int32_T clockTickCounter_i;          /* '<Root>/Pulse Generator' */
 } DW_Esercitazione0_T;
 
 /* Real-time Model Data Structure */

@@ -24,10 +24,26 @@
     "icon":"BlockIcon_icon"
    },
    {
+    "sid":"Esercitazione0:14",
+    "rsid":"Esercitazione0:14",
+    "name":"Data Type Conversion1",
+    "label":"Data Type Conversion1",
+    "className":"Simulink.DataTypeConversion",
+    "icon":"BlockIcon_icon"
+   },
+   {
     "sid":"Esercitazione0:2",
     "rsid":"Esercitazione0:2",
     "name":"Digital_Input",
     "label":"Digital_Input",
+    "className":"Simulink.SFunction",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:16",
+    "rsid":"Esercitazione0:16",
+    "name":"Digital_Input1",
+    "label":"Digital_Input1",
     "className":"Simulink.SFunction",
     "icon":"BlockIcon_icon"
    },
@@ -48,6 +64,70 @@
     "icon":"BlockIcon_icon"
    },
    {
+    "sid":"Esercitazione0:7",
+    "rsid":"Esercitazione0:7",
+    "name":"Digital_Output2",
+    "label":"Digital_Output2",
+    "className":"Simulink.SFunction",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:8",
+    "rsid":"Esercitazione0:8",
+    "name":"Logical\nOperator",
+    "label":"Logical Operator",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:9",
+    "rsid":"Esercitazione0:9",
+    "name":"Logical\nOperator1",
+    "label":"Logical Operator1",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:10",
+    "rsid":"Esercitazione0:10",
+    "name":"Logical\nOperator2",
+    "label":"Logical Operator2",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:20",
+    "rsid":"Esercitazione0:20",
+    "name":"Logical\nOperator3",
+    "label":"Logical Operator3",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:22",
+    "rsid":"Esercitazione0:22",
+    "name":"Logical\nOperator4",
+    "label":"Logical Operator4",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:23",
+    "rsid":"Esercitazione0:23",
+    "name":"Logical\nOperator5",
+    "label":"Logical Operator5",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:24",
+    "rsid":"Esercitazione0:24",
+    "name":"Logical\nOperator6",
+    "label":"Logical Operator6",
+    "className":"Simulink.Logic",
+    "icon":"BlockIcon_icon"
+   },
+   {
     "sid":"Esercitazione0:1",
     "rsid":"Esercitazione0:1",
     "name":"MBD_S32K1xx_Config_Information",
@@ -64,8 +144,24 @@
     "icon":"BlockIcon_icon"
    },
    {
-    "sid":"Esercitazione0:2#out:1",
-    "rsid":"Esercitazione0:2#out:1",
+    "sid":"Esercitazione0:15",
+    "rsid":"Esercitazione0:15",
+    "name":"Pulse\nGenerator1",
+    "label":"Pulse Generator1",
+    "className":"Simulink.DiscretePulseGenerator",
+    "icon":"BlockIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:5#out:1",
+    "rsid":"Esercitazione0:5#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:8#out:1",
+    "rsid":"Esercitazione0:8#out:1",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
@@ -80,8 +176,80 @@
     "icon":"LineIcon_icon"
    },
    {
-    "sid":"Esercitazione0:5#out:1",
-    "rsid":"Esercitazione0:5#out:1",
+    "sid":"Esercitazione0:15#out:1",
+    "rsid":"Esercitazione0:15#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:14#out:1",
+    "rsid":"Esercitazione0:14#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:22#out:1",
+    "rsid":"Esercitazione0:22#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:16#out:1",
+    "rsid":"Esercitazione0:16#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:2#out:1",
+    "rsid":"Esercitazione0:2#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:20#out:1",
+    "rsid":"Esercitazione0:20#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:9#out:1",
+    "rsid":"Esercitazione0:9#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:23#out:1",
+    "rsid":"Esercitazione0:23#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:24#out:1",
+    "rsid":"Esercitazione0:24#out:1",
+    "name":"",
+    "label":"",
+    "className":"Simulink.Line",
+    "icon":"LineIcon_icon"
+   },
+   {
+    "sid":"Esercitazione0:10#out:1",
+    "rsid":"Esercitazione0:10#out:1",
     "name":"",
     "label":"",
     "className":"Simulink.Line",
