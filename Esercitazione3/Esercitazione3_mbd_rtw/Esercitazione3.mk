@@ -211,6 +211,8 @@ ADD_INCLUDES = \
 	-$(include_opt)$(MATLAB_ROOT)\rtw\c\src \
 	-$(include_opt)$(MATLAB_ROOT)\rtw\c\src\ext_mode\common \
 	-$(include_opt)$(MATLAB_ROOT)\rtw\c\ert \
+	-$(include_opt)$(MATLAB_ROOT)\toolbox\aeroblks\aeroblks \
+	-$(include_opt)$(MATLAB_ROOT)\toolbox\aero\aero\src \
 
 
 SHARED_INCLUDES =
@@ -577,6 +579,20 @@ endif
     endif
 
 ###################################
+%.o : $(MATLAB_ROOT)\toolbox\aeroblks\aeroblks/%.c
+	@echo ### "$(MATLAB_ROOT)\toolbox\aeroblks\aeroblks\$*.c"o
+    ifeq ($(TARGET_COMPILER), GreenHills Multi)
+	$(CC) -c -MD $(CC_OPTS) $(CFLAGS) -o $@ $<
+    else
+	@$(CC) $(CC_OPTS) $(CFLAGS) $<
+    endif
+%.o : $(MATLAB_ROOT)\toolbox\aero\aero\src/%.c
+	@echo ### "$(MATLAB_ROOT)\toolbox\aero\aero\src\$*.c"o
+    ifeq ($(TARGET_COMPILER), GreenHills Multi)
+	$(CC) -c -MD $(CC_OPTS) $(CFLAGS) -o $@ $<
+    else
+	@$(CC) $(CC_OPTS) $(CFLAGS) $<
+    endif
 %.o : $(MATLAB_ROOT)\rtw\c\src/%.c
 	@echo ### "$(MATLAB_ROOT)\rtw\c\src\$*.c"o
     ifeq ($(TARGET_COMPILER), GreenHills Multi)

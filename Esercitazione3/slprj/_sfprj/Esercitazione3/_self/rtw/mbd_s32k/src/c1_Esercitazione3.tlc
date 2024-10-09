@@ -21,6 +21,13 @@
       SrcLocation  ""\
     }\
     ChartData {\
+      Name         "is_Blind_red"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Blind_red"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
       Name         "is_Normal_stoplight"\
       Description  "StateActiveChild"\
       SFName       ""\
@@ -35,24 +42,17 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_Blind_yellow"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "Blind_yellow"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_Blind_red"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "Blind_red"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
       Name         "k"\
       Description  "ChartLocal"\
       SFName       ""\
       Path         "k"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "trigger"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "trigger"\
       SrcLocation  ""\
     }\
     ChartData {\

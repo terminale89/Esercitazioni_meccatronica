@@ -7,10 +7,10 @@
  *
  * Code generated for Simulink model 'Esercitazione3'.
  *
- * Model version                   : 1.14
+ * Model version                   : 1.31
  * Simulink Coder version          : 9.8 (R2022b) 13-May-2022
  * MBDT for S32K1xx Series Version : 4.3.0 (R2016a-R2022a) 13-Sep-2022
- * C/C++ source code generated on  : Mon Oct  7 17:12:38 2024
+ * C/C++ source code generated on  : Tue Oct  8 19:15:23 2024
  *
  * Target selection: mbd_s32k.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,8 +23,6 @@
 #ifndef Esercitazione3_COMMON_INCLUDES_
 #define Esercitazione3_COMMON_INCLUDES_
 #include "rtwtypes.h"
-#include "pcc_hw_access.h"
-#include "pins_driver.h"
 #endif                                 /* Esercitazione3_COMMON_INCLUDES_ */
 
 #include "Esercitazione3_types.h"
@@ -40,23 +38,20 @@
 
 /* Block signals (default storage) */
 typedef struct {
-  boolean_T sw2;                       /* '<Root>/sw2' */
-  boolean_T lb;                        /* '<Root>/Chart1' */
-  boolean_T lr;                        /* '<Root>/Chart1' */
   boolean_T lg;                        /* '<Root>/Chart1' */
 } B_Esercitazione3_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  real_T k;                            /* '<Root>/Chart1' */
   uint8_T is_c1_Esercitazione3;        /* '<Root>/Chart1' */
+  uint8_T is_Blind_red;                /* '<Root>/Chart1' */
   uint8_T is_Normal_stoplight;         /* '<Root>/Chart1' */
   uint8_T is_yellow_on;                /* '<Root>/Chart1' */
-  uint8_T is_Blind_yellow;             /* '<Root>/Chart1' */
-  uint8_T is_Blind_red;                /* '<Root>/Chart1' */
   uint8_T is_active_c1_Esercitazione3; /* '<Root>/Chart1' */
   uint8_T temporalCounter_i1;          /* '<Root>/Chart1' */
   uint8_T temporalCounter_i2;          /* '<Root>/Chart1' */
+  boolean_T k;                         /* '<Root>/Chart1' */
+  boolean_T trigger;                   /* '<Root>/Chart1' */
 } DW_Esercitazione3_T;
 
 /* Real-time Model Data Structure */
@@ -77,6 +72,12 @@ extern void Esercitazione3_terminate(void);
 
 /* Real-time Model object */
 extern RT_MODEL_Esercitazione3_T *const Esercitazione3_M;
+
+/*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<Root>/Scope' : Unused code path elimination
+ */
 
 /*-
  * The generated code includes comments that allow you to trace directly
