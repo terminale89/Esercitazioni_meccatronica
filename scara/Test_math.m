@@ -1,0 +1,14 @@
+x = 6;
+y = 11;
+a = 10;
+c = sqrt(x^2 + y^2);
+gamma = atan (y / x);
+alpha = asin (a / c);
+servo1 = 180 * ((alpha + gamma) / pi);
+servo2 = 180 * ((pi - 2 * alpha) / pi);
+xa = - 10 * sin (pi * (servo1 - 90) / 180);
+ya = 10 * cos (pi * (servo1 - 90) / 180);
+xb = 10 * sin (pi * (servo2 + servo1 - 90) / 180);
+yb = 10 * cos (pi * (servo2 + servo1 - 90) / 180);
+xtest = xa + xb;
+ytest = ya + yb;
