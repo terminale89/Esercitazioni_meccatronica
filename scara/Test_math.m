@@ -1,6 +1,6 @@
 delta = 0;
-x = (10 * sin ( 1.57 + delta)) + 3;     % Cordinata X figura di  Lissajous
-y = (10 * sin ( 1.57)) + 3;             % Cordinata Y figura di  Lissajous
+x = (10 * sin ( 0 + delta)) + 3;     % Cordinata X figura di  Lissajous
+y = (10 * sin ( 0)) + 3;             % Cordinata Y figura di  Lissajous
 a = 10;
 c = sqrt(x^2 + y^2);                    % Modulo vettore posizione
 gamma = atan (y / x);                   % Angolo tra vettore posizione e asse X
