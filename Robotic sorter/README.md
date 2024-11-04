@@ -32,4 +32,10 @@ Per aumentare l'efficienza ed eliminare la necessità di fare il polling c'è un
 di interrupt che permette di avvertire il micro quando un colore è sopra o sotto
 una certa soglia e fare la lettura con la I2C solo quando necessaria.
 
-#### Macchina a stati:
+#### Macchina a stati
+
+![Macchina a stati](/Robotic%20sorter/Immagini/macchina%20a%20stati.png)
+
+#### Indirizzi registri
+
+![Indirizzi dei registri](/Robotic%20sorter/Immagini/Indirizzi%20sensore.png)
