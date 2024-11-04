@@ -1,6 +1,6 @@
-delta = pi / 2;
-x = (4 * sin ( (0*pi) + delta)) + 8;     % Cordinata X figura di  Lissajous
-y = (4 * sin(2*(0*pi))) + 8;             % Cordinata Y figura di  Lissajous
+delta = pi/2;
+x = (10 * sin ( (1.58) + delta)) + 2;     % Cordinata X figura di  Lissajous
+y = (10 * sin((1.58))) + 2;             % Cordinata Y figura di  Lissajous
 a = 10;
 c = sqrt(x^2 + y^2);                    % Modulo vettore posizione
 gamma = atan (y / x);                   % Angolo tra vettore posizione e asse X
