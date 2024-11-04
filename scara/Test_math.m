@@ -1,7 +1,7 @@
 delta = pi / 2;
-x = (5 * sin ( 1.55 + delta)) + 6;     % Cordinata X figura di  Lissajous
-y = (5 * sin ( 1.55)) + 6;             % Cordinata Y figura di  Lissajous
-a = 5;
+x = (4 * sin ( (0*pi) + delta)) + 8;     % Cordinata X figura di  Lissajous
+y = (4 * sin(2*(0*pi))) + 8;             % Cordinata Y figura di  Lissajous
+a = 10;
 c = sqrt(x^2 + y^2);                    % Modulo vettore posizione
 gamma = atan (y / x);                   % Angolo tra vettore posizione e asse X
 alpha = acos (c / (2 * a));             % Teorema delle proiezioni
