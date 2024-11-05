@@ -23,6 +23,8 @@ Mediante l'uso di un [braccio robotico](https://store.arduino.cc/products/tinker
     - PWM analogico da 0.5ms a 2.5ms
     - Range di movimento di 180°
 2. 4 x SR 431 (uguale a quello sopra ma più grosso e con più coppia)
+![Identificatori motori](./Immagini/Identificatori%20motori.png)
+![Range motori](./Immagini/Range%20motori.png)
 
 ### Sensore di colore
 
