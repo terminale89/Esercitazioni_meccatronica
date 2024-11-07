@@ -36,8 +36,8 @@ una certa soglia e fare la lettura con la I2C solo quando necessaria.
 
 #### Macchina a stati
 
-![Macchina a stati](/Robotic%20sorter/Immagini/macchina%20a%20stati.png)
+![Macchina a stati](./Immagini/macchina%20a%20stati.png)
 
 #### Indirizzi registri
 
-![Indirizzi dei registri](/Robotic%20sorter/Immagini/Indirizzi%20sensore.png)
+![Indirizzi dei registri](./Immagini/Indirizzi%20sensore.png)
