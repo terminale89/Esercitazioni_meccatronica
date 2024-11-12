@@ -1,0 +1,18 @@
+function Rs = DH_to_Rot_mat(DH)
+
+    % DH_line = [d th r al]
+    n_joints = size(DH);
+    Rs = cell(n_joints, 1);
+
+    for i = 1:n_joints
+        DH_line = DH{i};
+        d = DH_line(1);
+        th = DH_line(2);
+        r = DH_line(3);
+        al = DH_line(4);
+        Rot_mat = [
+                
+            ];
+    end
+
+end
