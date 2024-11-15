@@ -40,4 +40,18 @@ una certa soglia e fare la lettura con la I2C solo quando necessaria.
 
 #### Indirizzi registri
 
+Indirizzo sensore: 0x29.
+
 ![Indirizzi dei registri](./Immagini/Indirizzi%20sensore.png)
+
+#### Collegamenti
+
+| Pin Slave | Funzione | Pin Master |
+| :-----    | :------- | :---------|
+| Vin | Tensione di ingresso (da 3,3V a 5V) | J3-9/3 |
+| Gnd | Ground | J3-11/13 |
+| 3V3 | Tensione di uscita 3V3 | DNC |
+| SCL | Clock I2C | J1-3 |
+| SDA | Data I2C | J1-1 |
+| INT | Interrupt (Open drain) | TBD |
+| LED | Spegnimento LED (Vcc spento, Gnd acceso)| DNC |
