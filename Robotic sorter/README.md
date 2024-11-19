@@ -38,16 +38,41 @@ una certa soglia e fare la lettura con la I2C solo quando necessaria.
 
 ![Macchina a stati](./Immagini/macchina%20a%20stati.png)
 
-#### Indirizzi registri
+#### Indirizzi registri e settaggio
 
 Indirizzo sensore: 0x29.
 
+Per scrivere gli indirizzi del sensore bisogna mandare come primo byte il command.
+
+
 ![Indirizzi dei registri](./Immagini/Indirizzi%20sensore.png)
+
+| Indirizzo | Nome               | Settaggio | Descrizione |
+| :-------: | :---               | :-------: | :---------- |
+| ------    | Command            | 10100000  |  pag 14     |
+| 0x00      | Enable             | 0001(0)010 | PAG 15     |
+| 0x01      | Timing             | 11111111 | PAG 16       |
+| 0x03      | Wait               | 11111111 | PAG 16       |
+| 0x04      | Clear_L_th_L_byte  | 00000000 | PAG 17       |
+| 0x05      | Clear_L_th_U_byte  | 00000000 | PAG 17       |
+| 0x06      | Clear_H_th_L_byte  | 00000000 | PAG 17       |
+| 0x07      | Clear_H_th_H_byte  | 00000000 | PAG 17       |
+| 0x0C      | Persistance        | 00000000 | PAG 17       |
+| 0x0D      | Configuration      | 00000000 | PAG 18       |
+| 0x0F      | Control            | 00000001 | PAG 18       |
+| 0x12      | ID                 | 0x4D     | PAG 18       |
+| 0x13      | Status             |          | PAG 19       |
+| 0x14      | Clear_data_L       |          | PAG 19       |
+| 0x15      | Clear_data_H       |          | PAG 19       |
+| 0x16      | Red_data_L         |          | PAG 19       |
+| 0x17      | Red_data_H         |          | PAG 19       |
+| 0x18      | Blu_data_L         |          | PAG 19       |
+| 0x0C      | Blu_data_H         |          | PAG 19       |
 
 #### Collegamenti
 
 | Pin Slave | Funzione | Pin Master |
-| :-----    | :------- | :---------|
+| :-----:    | :------- | :--------- |
 | Vin | Tensione di ingresso (da 3,3V a 5V) | J3-9/3 |
 | Gnd | Ground | J3-11/13 |
 | 3V3 | Tensione di uscita 3V3 | DNC |
