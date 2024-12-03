@@ -84,6 +84,10 @@ Per scrivere gli indirizzi del sensore bisogna mandare come primo byte il comman
 
 ## Test sensore
 
+Chatgpt -> ATIME ->00, CONTROL -> 01
+0xC0, 0x03
+OxBA, 0x00
+
 ### Configurazione 1
 
 #### Senza nulla sopra
