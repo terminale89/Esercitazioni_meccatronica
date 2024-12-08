@@ -46,29 +46,29 @@ Per scrivere gli indirizzi del sensore bisogna mandare come primo byte il comman
 
 ![Indirizzi dei registri](./Immagini/Indirizzi%20sensore.png)
 
-| Indirizzo | Nome               | Settaggio_1| Setteggio_2 | Descrizione |
-| :-------: | :---               | :------:   | :---------- | :---------- |
-| ------    | Command            | 10100000   |  10100000   |  pag 14     |
-| 0x00      | Enable             | 00010011   |  00010011   | PAG 15      |
-| 0x01      | Timing             | 0XA0       |  0XCA       | PAG 16      |
-| 0x03      | Wait               | 11111111   |  11111111   | PAG 16      |
-| 0x04      | Clear_L_th_L_byte  | 00000000   |  00000000   | PAG 17      |
-| 0x05      | Clear_L_th_U_byte  | 00000000   |  00000000   | PAG 17      |
-| 0x06      | Clear_H_th_L_byte  | 00000000   |  00000000   | PAG 17      |
-| 0x07      | Clear_H_th_H_byte  | 00000000   |  00000000   | PAG 17      |
-| 0x0C      | Persistance        | 00000000   |  00000000   | PAG 17      |
-| 0x0D      | Configuration      | 00000000   |  00000000   | PAG 18      |
-| 0x0F      | Control            | 00000000   |  00000000   | PAG 18      |
-| 0x12      | ID                 | 0x4D       |  0x4D       | PAG 18      |
-| 0x13      | Status             |            |             | PAG 19      |
-| 0x14      | Clear_data_L       |            |             |             |
-| 0x15      | Clear_data_H       |            |             |             |
-| 0x16      | Red_data_L         |            |             |             |
-| 0x17      | Red_data_H         |            |             |             |
-| 0x18      | Green_data_L       |            |             |             |
-| 0x19      | Green_data_H       |            |             |             |
-| 0x1A      | Blu_data_L         |            |             |             |
-| 0x1B      | Blu_data_H         |            |             |             |
+| Indirizzo | Nome               | Configurazione_1| Configurazione_2 | Descrizione |
+| :-------: | :---               | :------:        | :----------      | :---------- |
+| ------    | Command            | 10100000        |  10100000        | PAG 14      |
+| 0x00      | Enable             | 00000011        |  00000011        | PAG 15      |
+| 0x01      | Timing             | 0X2A            |  0XC0            | PAG 16      |
+| 0x03      | Wait               | 11111111        |  11111111        | PAG 16      |
+| 0x04      | Clear_L_th_L_byte  | 00000000        |  00000000        | PAG 17      |
+| 0x05      | Clear_L_th_U_byte  | 00000000        |  00000000        | PAG 17      |
+| 0x06      | Clear_H_th_L_byte  | 00000000        |  00000000        | PAG 17      |
+| 0x07      | Clear_H_th_H_byte  | 00000000        |  00000000        | PAG 17      |
+| 0x0C      | Persistance        | 00000000        |  00000000        | PAG 17      |
+| 0x0D      | Configuration      | 00000000        |  00000000        | PAG 18      |
+| 0x0F      | Control            | 00000010        |  00000011        | PAG 18      |
+| 0x12      | ID                 | 0x4D            |  0x4D            | PAG 18      |
+| 0x13      | Status             |                 |                  | PAG 19      |
+| 0x14      | Clear_data_L       |                 |                  |             |
+| 0x15      | Clear_data_H       |                 |                  |             |
+| 0x16      | Red_data_L         |                 |                  |             |
+| 0x17      | Red_data_H         |                 |                  |             |
+| 0x18      | Green_data_L       |                 |                  |             |
+| 0x19      | Green_data_H       |                 |                  |             |
+| 0x1A      | Blu_data_L         |                 |                  |             |
+| 0x1B      | Blu_data_H         |                 |                  |             |
 
 #### Collegamenti
 
@@ -84,108 +84,95 @@ Per scrivere gli indirizzi del sensore bisogna mandare come primo byte il comman
 
 ## Test sensore
 
-Chatgpt -> ATIME ->00, CONTROL -> 01
-0xC0, 0x03
-OxBA, 0x00
-
 ### Configurazione 1
 
-#### Senza nulla sopra
-
-| Indirizzo | Nome               | Lettura | Lettura 2 |
-| :-------: | :---               | :------:| :------:  |
-| 0x13      | Status             | ??      |           |
-| 0x14      | Clear_data_L       | 11      | 11        |
-| 0x15      | Clear_data_H       | 49      | 21        |
-| 0x16      | Red_data_L         | 07      | 1A        |
-| 0x17      | Red_data_H         | 60      | 1E        |
-| 0x18      | Green_data_L       | 02      | 14        |
-| 0x19      | Green_data_H       | AF      | EF        |
-| 0x1A      | Blu_data_L         | 02      | 03        |
-| 0x1B      | Blu_data_H         | CB      | 97        |
-
 #### Rosso
 
-| Indirizzo | Nome               | Lettura | Lettura 2 |
-| :-------: | :---               | :------:| :------:  |
-| 0x13      | Status             | ??      |           |
-| 0x14      | Clear_data_L       | 11      | 11        |
-| 0x15      | Clear_data_H       | FB      | 21        |
-| 0x16      | Red_data_L         | 0F      | 1A        |
-| 0x17      | Red_data_H         | 74      | 1E        |
-| 0x18      | Green_data_L       | 0C      | 14        |
-| 0x19      | Green_data_H       | 41      | EF        |
-| 0x1A      | Blu_data_L         | 02      | 03        |
-| 0x1B      | Blu_data_H         | 23      | 97        |
-
-#### Blu
-
-| Indirizzo | Nome               | Lettura | Lettura 2 |
-| :-------: | :---               | :------:| :-------: |
-| 0x13      | Status             | ??      |           |
-| 0x14      | Clear_data_L       | 11      | 11        |
-| 0x15      | Clear_data_H       | 60      | 7E        |
-| 0x16      | Red_data_L         | 04      | 06        |
-| 0x17      | Red_data_H         | A7      | 7F        |
-| 0x18      | Green_data_L       | 01      | 02        |
-| 0x19      | Green_data_H       | 32      | C8        |
-| 0x1A      | Blu_data_L         | 01      | 01        |
-| 0x1B      | Blu_data_H         | BF      | 83        |
-
-#### Verde
-
-| Indirizzo | Nome               | Lettura | Verde brillante |
-| :-------: | :---               | :-----: | :-------------: |
-| 0x13      | Status             | ??      | ??              |
-| 0x14      | Clear_data_L       | 11      | 11              |
-| 0x15      | Clear_data_H       | 86      | 64              |
-| 0x16      | Red_data_L         | 03      | 0F              |
-| 0x17      | Red_data_H         | 71      | A3              |
-| 0x18      | Green_data_L       | 01      | 05              |
-| 0x19      | Green_data_H       | 37      | 38              |
-| 0x1A      | Blu_data_L         | 01      | 06              |
-| 0x1B      | Blu_data_H         | C9      | B4              |
-
-### Configurazione 2
-
-#### Rosso
-
-| Indirizzo | Nome               | Lettura | Lettura 2 |
-| :-------: | :---               | :------:| :------:  |
-| 0x13      | Status             | ??      |           |
-| 0x14      | Clear_data_L       | 11      | 11        |
-| 0x15      | Clear_data_H       | FB      | 21        |
-| 0x16      | Red_data_L         | 0F      | 1A        |
-| 0x17      | Red_data_H         | 74      | 1E        |
-| 0x18      | Green_data_L       | 0C      | 14        |
-| 0x19      | Green_data_H       | 41      | EF        |
-| 0x1A      | Blu_data_L         | 02      | 03        |
-| 0x1B      | Blu_data_H         | 23      | 97        |
+| Indirizzo | Nome               | Lettura |
+| :-------: | :---               | :------:|
+| 0x13      | Status             | ??      |
+| 0x14      | Clear_data_L       | FF      |
+| 0x15      | Clear_data_H       | FF      |
+| 0x16      | Red_data_L         | 6A      |
+| 0x17      | Red_data_H         | D6      |
+| 0x18      | Green_data_L       | E4      |
+| 0x19      | Green_data_H       | 26      |
+| 0x1A      | Blu_data_L         | 97      |
+| 0x1B      | Blu_data_H         | 1F      |
 
 #### Blu
 
 | Indirizzo | Nome               | Lettura |
 | :-------: | :---               | :------:|
-| 0x13      | Status             | ??      |
-| 0x14      | Clear_data_L       | 11      |
-| 0x15      | Clear_data_H       | 01      |
-| 0x16      | Red_data_L         | 16      |
-| 0x17      | Red_data_H         | 2C      |
-| 0x18      | Green_data_L       | 00      |
-| 0x19      | Green_data_H       | 35      |
-| 0x1A      | Blu_data_L         | 06      |
-| 0x1B      | Blu_data_H         | B7      |
+| 0x13      | Status             | 11      |
+| 0x14      | Clear_data_L       | FF      |
+| 0x15      | Clear_data_H       | FF      |
+| 0x16      | Red_data_L         | E4      |
+| 0x17      | Red_data_H         | 43      |
+| 0x18      | Green_data_L       | 2B      |
+| 0x19      | Green_data_H       | 79      |
+| 0x1A      | Blu_data_L         | F4      |
+| 0x1B      | Blu_data_H         | 66      |
 
 #### Verde
 
-| Indirizzo | Nome               | Lettura | Verde brillante |
-| :-------: | :---               | :-----: | :-------------: |
-| 0x13      | Status             | ??      | ??              |
-| 0x14      | Clear_data_L       | 11      | 11              |
-| 0x15      | Clear_data_H       | 86      | 64              |
-| 0x16      | Red_data_L         | 03      | 0F              |
-| 0x17      | Red_data_H         | 71      | A3              |
-| 0x18      | Green_data_L       | 01      | 05              |
-| 0x19      | Green_data_H       | 37      | 38              |
-| 0x1A      | Blu_data_L         | 01      | 06              |
-| 0x1B      | Blu_data_H         | C9      | B4              |
+| Indirizzo | Nome               | Lettura |
+| :-------: | :---               | :-----: |
+| 0x13      | Status             | 11      |
+| 0x14      | Clear_data_L       | FF      |
+| 0x15      | Clear_data_H       | FF      |
+| 0x16      | Red_data_L         | 48      |
+| 0x17      | Red_data_H         | 55      |
+| 0x18      | Green_data_L       | B9      |
+| 0x19      | Green_data_H       | 7C      |
+| 0x1A      | Blu_data_L         | 6C      |
+| 0x1B      | Blu_data_H         | 3B      |
+
+### Configurazione 2
+
+#### Rosso
+
+| Indirizzo | Nome               | Lettura |
+| :-------: | :---               | :------:|
+| 0x13      | Status             | 11      |
+| 0x14      | Clear_data_L       | FF      |
+| 0x15      | Clear_data_H       | FF      |
+| 0x16      | Red_data_L         | 01      |
+| 0x17      | Red_data_H         | FF      |
+| 0x18      | Green_data_L       | 31      |
+| 0x19      | Green_data_H       | 2F      |
+| 0x1A      | Blu_data_L         | 62      |
+| 0x1B      | Blu_data_H         | 25      |
+
+#### Blu
+
+| Indirizzo | Nome               | Lettura |
+| :-------: | :---               | :------:|
+| 0x13      | Status             | 11      |
+| 0x14      | Clear_data_L       | FF      |
+| 0x15      | Clear_data_H       | FF      |
+| 0x16      | Red_data_L         | 2D      |
+| 0x17      | Red_data_H         | 49      |
+| 0x18      | Green_data_L       | 03      |
+| 0x19      | Green_data_H       | 80      |
+| 0x1A      | Blu_data_L         | 77      |
+| 0x1B      | Blu_data_H         | 6C      |
+
+#### Verde
+
+| Indirizzo | Nome               | Lettura |
+| :-------: | :---               | :-----: |
+| 0x13      | Status             | 11      |
+| 0x14      | Clear_data_L       | FF      |
+| 0x15      | Clear_data_H       | FF      |
+| 0x16      | Red_data_L         | 79      |
+| 0x17      | Red_data_H         | 5A      |
+| 0x18      | Green_data_L       | CD      |
+| 0x19      | Green_data_H       | 80      |
+| 0x1A      | Blu_data_L         | 9A      |
+| 0x1B      | Blu_data_H         | 3D      |
+
+Si sceglie la Configurazione_2 in quanto ci permette a parità di valori
+di uscita comparabili con la configurazione 1 con tempi di misura molto
+più veloci (154ms vs 511ms) che moltiplicato per i tre valori del voter
+fa un risparmio di più di un secondo nella misura a parità (o con una maggiore) accuratezza.
