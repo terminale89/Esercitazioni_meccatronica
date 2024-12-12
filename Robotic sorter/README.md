@@ -26,6 +26,13 @@ Mediante l'uso di un [braccio robotico](https://store.arduino.cc/products/tinker
 ![Identificatori motori](./Immagini/Identificatori%20motori.png)
 ![Range motori](./Immagini/Range%20motori.png)
 
+#### Collegamenti
+
+|  M6 |  M5 |  M4 |  M3 |  M2  |  M1  |
+|:---:|:---:|:---:|:---:|:----:|:----:|
+|PTB-5|PTB-4|PTC-3|PTC-2|PTB-13|PTB-12|
+| J2-5| J2-7|J1-13|J5-15|J5-11 | J4-3 |
+
 ### Sensore di colore
 
 Il sensore è costituito da una matrice di fotodiodi, 4 adc, una macchina a stati
