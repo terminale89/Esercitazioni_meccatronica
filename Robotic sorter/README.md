@@ -11,7 +11,7 @@ Mediante l'uso di un [braccio robotico](https://store.arduino.cc/products/tinker
 |Tinkerkit Braccio robot|Braccio robot 6 assi|[datasheet](https://store.arduino.cc/products/tinkerkit-braccio-robot?srsltid=AfmBOorpDogQ4HbyjZogZo8spMaIm-5Hzn5_y7hVqd3n9clGSyTXihFV) |
 | TCS34725 | Sensore colore I2C | [datasheet](https://homotix_it.e-mind.it/upld/repository/File/tcs34725.pdf) |
 | Cubi colorati | Cubetti colorati da mettere nelle scatole| |
-| Caricatore | Da fare forse con un'altro servo tipo nastro trasportatore o ascensore | |
+
 
 ## Descrizione elementi utili
 
@@ -28,10 +28,10 @@ Mediante l'uso di un [braccio robotico](https://store.arduino.cc/products/tinker
 
 #### Collegamenti
 
-|  M6 |  M5 |  M4 |  M3 |  M2  |  M1  |
-|:---:|:---:|:---:|:---:|:----:|:----:|
-|PTB-5|PTB-4|PTC-3|PTC-2|PTB-13|PTB-12|
-| J2-5| J2-7|J1-13|J5-15|J5-11 | J4-3 |
+|  M6 |  M5 |  M4 |  M3 |  M2  |  M1  | Gnd |  
+|:---:|:---:|:---:|:---:|:----:|:----:| :--:|
+|PTB-5|PTB-4|PTC-3|PTC-2|PTB-13|PTB-12|     |
+| J2-5| J2-7|J4-16|J5-15|J5-11 | J4-3 |J3-13|
 
 ### Sensore di colore
 
