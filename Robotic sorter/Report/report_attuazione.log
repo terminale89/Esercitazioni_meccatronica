@@ -1,0 +1,205 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.27)  29 DEC 2024 18:52
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./report_attuazione.tex
+(report_attuazione.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-03-30>
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count194
+\l__pdf_internal_box=\box51
+) (report_attuazione.aux)
+\openout1 = `report_attuazione.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count195
+\scratchdimen=\dimen143
+\scratchbox=\box52
+\nofMPsegments=\count196
+\nofMParguments=\count197
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count198
+\MPscratchDim=\dimen144
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
+\everyMPtoPDFconversion=\toks18
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+ [1
+
+{C:/Users/marpe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(report_attuazione.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
+\tf@toc=\write3
+\openout3 = `report_attuazione.toc'.
+
+ [1
+
+]
+Chapter 1.
+<./images//Modules.png, id=11, 1221.06187pt x 325.96782pt>
+File: ./images//Modules.png Graphic file (type png)
+<use ./images//Modules.png>
+Package pdftex.def Info: ./images//Modules.png  used on input line 27.
+(pdftex.def)             Requested size: 390.0pt x 104.11287pt.
+[2
+
+ <./images//Modules.png>]
+Overfull \hbox (26.729pt too wide) in paragraph at lines 35--36
+[]\OT1/cmr/m/n/12 Ottenuti dei pro-totipi fun-zio-nanti dei due mod-uli, ab-bi-
+amo definito l'interfaccia
+ []
+
+[3]
+Chapter 2.
+[4
+
+]
+Chapter 3.
+<./images//Complete_attuation.png, id=24, 1317.42188pt x 252.19218pt>
+File: ./images//Complete_attuation.png Graphic file (type png)
+<use ./images//Complete_attuation.png>
+Package pdftex.def Info: ./images//Complete_attuation.png  used on input line 6
+5.
+(pdftex.def)             Requested size: 390.0pt x 74.65771pt.
+[5
+
+ <./images//Complete_attuation.png>]
+<./images//Path_structure.png, id=29, 526.96875pt x 293.59688pt>
+File: ./images//Path_structure.png Graphic file (type png)
+<use ./images//Path_structure.png>
+Package pdftex.def Info: ./images//Path_structure.png  used on input line 84.
+(pdftex.def)             Requested size: 390.0pt x 217.29411pt.
+ [6 <./images//Path_structure.png>]
+[7]
+<./images//Harness.png, id=39, 1044.15094pt x 472.01344pt>
+File: ./images//Harness.png Graphic file (type png)
+<use ./images//Harness.png>
+Package pdftex.def Info: ./images//Harness.png  used on input line 129.
+(pdftex.def)             Requested size: 390.0pt x 176.29877pt.
+ [8 <./images//Harness.png>]
+Chapter 4.
+<./images//Blender3D.png, id=44, 318.43968pt x 313.17pt>
+File: ./images//Blender3D.png Graphic file (type png)
+<use ./images//Blender3D.png>
+Package pdftex.def Info: ./images//Blender3D.png  used on input line 148.
+(pdftex.def)             Requested size: 390.0pt x 383.54341pt.
+[9
+
+] [10 <./images//Blender3D.png>]
+Chapter 5.
+[11
+
+]
+Chapter 6.
+
+Overfull \hbox (6.26256pt too wide) in paragraph at lines 164--165
+[]\OT1/cmr/m/n/12 Riguardo la parte di at-tuazione, i due pas-saggi chi-ave son
+o stati la riduzione
+ []
+
+[12
+
+] (report_attuazione.aux) ) 
+Here is how much of TeX's memory you used:
+ 1396 strings out of 476331
+ 24383 string characters out of 5787765
+ 1854660 words of memory out of 5000000
+ 21864 multiletter control sequences out of 15000+600000
+ 518438 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,62p,377b,228s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\marpe\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/marpe/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/marpe/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/marpe/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/marpe/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report_attuazione.pdf (13 pages, 222508 bytes).
+PDF statistics:
+ 81 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+

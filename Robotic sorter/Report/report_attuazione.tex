@@ -1,6 +1,54 @@
 \documentclass[12pt]{report}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\title{{Progetto di Meccatronica}\\{Robotic sorter}}
+
+\author{{Tosi Ubaldo}\\{Passerella Filippo}}
 
 \begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{Introduzione}
+
+Abbiamo realizzato il controllo di un manipolatore per smistamento di cubi colorati.
+
+Il sistema riconosce il colore del cubo posto sull'apposita pedana e lo riposiziona nella zona appropriata. Poi torna alla posizione iniziale, in attesa del cubo seguente.
+
+Abbiamo provato il sistema in più condizioni e non ci sono noti casi di malfunzionamento in ambiente adatto.
+
+\section{Divisione delle funzioni}
+
+Abbiamo deciso di dividere il programma finale in due parti, un modulo di percezione e un modulo di attuazione.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Modules}
+\caption{Moduli}
+\end{figure}
+
+Il primo si occupa di interfacciarsi con il sensore di colore e temporizzare il secondo. Il secondo controlla il manipolatore e gestisce i percorsi.
+
+Le funzioni dei due moduli erano sufficientemente indipendenti da poter essere sviluppati e verificati parallelamente.
+
+Ottenuti dei prototipi funzionanti dei due moduli, abbiamo definito l'interfaccia che ha poi determinato la loro versione finale.
+
+\section{Modalità d'uso}
+
+Innanzitutto, occorre collegare l'hardware e accendere il dispositivo.
+
+---------------Foto o tabella dei collegamenti
+
+Si vedrà il braccio posizionarsi nella configurazione di attesa.
+
+Posizionare un cubo colorato sulla pedana e premere \emph{sw2}.
+
+Il manipolatore sposterà il cubo nella zona appropriata e tornerà nella configurazione di attesa.
+
+\chapter{Percezione}
+
+
 \chapter{Attuazione}
 
 Il modulo di attuazione controlla l'uscita PWM per i servo-motori per guidare il braccio robotico lungo percorsi predefiniti.
@@ -8,6 +56,8 @@ Il modulo di attuazione controlla l'uscita PWM per i servo-motori per guidare il
 Due input determinano il percorso da seguire e il punto corrente del percorso.
 
 Altri input e output sono usati solo in fase di debug.
+
+Il modulo è stato ideato per permettere un controllo semplice della velocità di esecuzione e flessibilità nella scelta del percorso.
 
 \section{Principio di funzionamento}
 
@@ -59,6 +109,62 @@ Per questo è importante usare il blocco \textbf{Detect Change}.
 
 \section{Cinematica inversa}
 
+Ci sono 6 motori in totale, denominati da M1 a M6.
+
+M6 controlla la chiusura della pinza, M5 la rotazione del polso. I motori che determinano posizione e orientazione dell'end-effector sono 4.
+
+M2, M3 e M4 possono spostare l'end-effector solo sul piano determinato da M1. Fissata la posizione dell'end-effector, è determinata la rotazione di M1 per avere l'allineamento. Fissata anche l'orientazione finale desiderata, anche la posizione di M4 è identificata. Data questa, M2 e M3 formano uno Scara con M4 come end-effector.
+
+\section{Test}
+
+Il sistema di attuazione è stato prima verificato in SIL e in PIL in più iterazioni.
+
+Sono stati progressivamente aggiunti blocchi ad ogni iterazione che ha avuto successo, in questo ordine: PWM-driver, IK, Interpolate, Selector.
+
+Le uscite di debug mostrano la posizione desiderata, gli angoli previsti e i duty cycle impostati.
+
+Un input di debug permette di riportare il braccio in una posizione sicura ed è stato usato in PIL.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Harness}
+\caption{Harness del modulo di attuazione (screenshot scattato a fine progetto, differisce parzialmente da quello usato.}
+\end{figure}
+
+\chapter{Verifica finale}
+
+Sviluppati e verificati indipendentemente i due moduli, abbiamo cominciato la fase finale.
+
+I due moduli sono stati combinati velocemente, grazie alla semplice interfaccia.
+
+Ci siamo accorti di non poter fare simulazioni \emph{in the loop} perché incompatibili con la periferica I2C.
+
+Abbiamo usato la UART per verificare che tutto proseguisse come previsto durante la verifica.
+
+Non abbiamo riscontrato problemi oltre all'impossibilità di usare SIL/PIL o i timer (per mandare messaggi temporizzati tramite UART). Così abbiamo subito potuto definire e verificare i percorsi.
+
+Avevamo preparato delle bozze dei percorsi usando un modello del braccio realizzato e animato su Blender3D. Modificando queste in base alle verifiche abbiamo ottenuto dei percorsi che ci soddisfacessero.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Blender3D}
+\caption{Armatura del braccio su Blender3D}
+\end{figure}
+
+\chapter{Problemi durante lo sviluppo}
+
+Durante i test PIL, due pezzi stampati 3D per la trasmissione della coppia da servo-motori a struttura si sono rotti. In particolare si sono spanati gli incastri per i servo-motori.
+
+Il primo guasto è stato dovuto a un blocca di ritardo nell'harness: la condizione iniziale ha fatto piegare il braccio su se stesso all'avvio.
+
+Il secondo guasto è stato dovuto alla base fissata male (svitando le viti si sono rovinati i fori) in seguito alle riparazioni del guasto precedente.
+
+\chapter{Conclusione}
+
+Realizzata la parte funzionale, abbiamo preparato una base pieghevole su cui abbiamo montato la pedana di riconoscimento e dei cartoncini colorati per indicare le zone di smistamento.
+
+Riguardo la parte di attuazione, i due passaggi chiave sono stati la riduzione dell'algoritmo IK a quello di uno scara e l'uso estensivo di SIL e PIL.
 
 
+------------------Bla bla bla
+
+Noi possiamo ritenere con soddisfazione questo progetto un successo, dal punto di vista sia del risultato finale, sia della flessibilità e futura modificabilità della funzione, sia del processo in sé.
 \end{document}
