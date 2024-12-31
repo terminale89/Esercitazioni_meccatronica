@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.27)  29 DEC 2024 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.27)  31 DEC 2024 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -104,102 +104,268 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/marpe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(report_attuazione.toc
+[1] (report_attuazione.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-)
+ [2
+
+])
 \tf@toc=\write3
 \openout3 = `report_attuazione.toc'.
 
- [1
-
-]
+ [3]
 Chapter 1.
-<./images//Modules.png, id=11, 1221.06187pt x 325.96782pt>
+<./images//Modules.png, id=17, 1221.06187pt x 325.96782pt>
 File: ./images//Modules.png Graphic file (type png)
 <use ./images//Modules.png>
-Package pdftex.def Info: ./images//Modules.png  used on input line 27.
+Package pdftex.def Info: ./images//Modules.png  used on input line 31.
 (pdftex.def)             Requested size: 390.0pt x 104.11287pt.
-[2
+[4
 
  <./images//Modules.png>]
-Overfull \hbox (26.729pt too wide) in paragraph at lines 35--36
+Overfull \hbox (26.729pt too wide) in paragraph at lines 39--40
 []\OT1/cmr/m/n/12 Ottenuti dei pro-totipi fun-zio-nanti dei due mod-uli, ab-bi-
 amo definito l'interfaccia
  []
 
-[3]
+[5]
 Chapter 2.
-[4
+<./images//Immagini_sensore/pcb_sensore.png, id=27, 534.49687pt x 489.32813pt>
+File: ./images//Immagini_sensore/pcb_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/pcb_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/pcb_sensore.png  used on in
+put line 56.
+(pdftex.def)             Requested size: 155.99762pt x 142.81242pt.
+<./images//Immagini_sensore/I2C_3V3_to_5.png, id=28, 351.56343pt x 191.9672pt>
+File: ./images//Immagini_sensore/I2C_3V3_to_5.png Graphic file (type png)
+<use ./images//Immagini_sensore/I2C_3V3_to_5.png>
+Package pdftex.def Info: ./images//Immagini_sensore/I2C_3V3_to_5.png  used on i
+nput line 71.
+(pdftex.def)             Requested size: 155.99762pt x 85.18054pt.
+<./images//Immagini_sensore/Blocco_funzionale.png, id=29, 536.0025pt x 201.0009
+3pt>
+File: ./images//Immagini_sensore/Blocco_funzionale.png Graphic file (type png)
+<use ./images//Immagini_sensore/Blocco_funzionale.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Blocco_funzionale.png  used
+ on input line 80.
+(pdftex.def)             Requested size: 155.99762pt x 58.49733pt.
+<./images//Immagini_sensore/sensore.png, id=30, 230.36063pt x 176.91093pt>
+File: ./images//Immagini_sensore/sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/sensore.png  used on input 
+line 86.
+(pdftex.def)             Requested size: 155.99762pt x 119.80113pt.
+[6
 
-]
+] [7 <./images//Immagini_sensore/pcb_sensore.png> <./images//Immagini_sensore/I
+2C_3V3_to_5.png> <./images//Immagini_sensore/Blocco_funzionale.png> <./images//
+Immagini_sensore/sensore.png>]
+<./images//Immagini_sensore/Responsività_sensore.png, id=44, 224.33812pt x 230
+.36063pt>
+File: ./images//Immagini_sensore/Responsività_sensore.png Graphic file (type p
+ng)
+<use ./images//Immagini_sensore/Responsività_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Responsività_sensore.png  
+used on input line 98.
+(pdftex.def)             Requested size: 155.99762pt x 160.18979pt.
+<./images//Immagini_sensore/I2C.png, id=45, 640.64343pt x 441.14813pt>
+File: ./images//Immagini_sensore/I2C.png Graphic file (type png)
+<use ./images//Immagini_sensore/I2C.png>
+Package pdftex.def Info: ./images//Immagini_sensore/I2C.png  used on input line
+ 107.
+(pdftex.def)             Requested size: 390.0pt x 268.56145pt.
+<./images//Immagini_sensore/registro_di_command.png, id=46, 636.12656pt x 350.8
+1062pt>
+File: ./images//Immagini_sensore/registro_di_command.png Graphic file (type png
+)
+<use ./images//Immagini_sensore/registro_di_command.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_di_command.png  us
+ed on input line 114.
+(pdftex.def)             Requested size: 390.0pt x 215.07545pt.
+<./images//Immagini_sensore/macchina_a_stati.png, id=47, 255.95625pt x 298.8665
+6pt>
+File: ./images//Immagini_sensore/macchina_a_stati.png Graphic file (type png)
+<use ./images//Immagini_sensore/macchina_a_stati.png>
+Package pdftex.def Info: ./images//Immagini_sensore/macchina_a_stati.png  used 
+on input line 126.
+(pdftex.def)             Requested size: 155.99762pt x 182.14871pt.
+ [8 <./images//Immagini_sensore/Responsività_sensore.png>] [9 <./images//Immag
+ini_sensore/I2C.png> <./images//Immagini_sensore/registro_di_command.png>]
+<./images//Immagini_sensore/Indirizzi_sensore.png, id=57, 211.91672pt x 134.377
+03pt>
+File: ./images//Immagini_sensore/Indirizzi_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/Indirizzi_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Indirizzi_sensore.png  used
+ on input line 135.
+(pdftex.def)             Requested size: 390.0pt x 247.31003pt.
+ [10 <./images//Immagini_sensore/macchina_a_stati.png>]
+<./images//Immagini_sensore/registro_enable.png, id=61, 764.10469pt x 362.85562
+pt>
+File: ./images//Immagini_sensore/registro_enable.png Graphic file (type png)
+<use ./images//Immagini_sensore/registro_enable.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_enable.png  used o
+n input line 164.
+(pdftex.def)             Requested size: 390.0pt x 185.2034pt.
+ [11 <./images//Immagini_sensore/Indirizzi_sensore.png>]
+<./images//Immagini_sensore/registro_timing.png, id=66, 651.93562pt x 222.07968
+pt>
+File: ./images//Immagini_sensore/registro_timing.png Graphic file (type png)
+<use ./images//Immagini_sensore/registro_timing.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_timing.png  used o
+n input line 174.
+(pdftex.def)             Requested size: 390.0pt x 132.85574pt.
+<./images//Immagini_sensore/registro_control.png, id=67, 638.385pt x 226.59656p
+t>
+File: ./images//Immagini_sensore/registro_control.png Graphic file (type png)
+<use ./images//Immagini_sensore/registro_control.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_control.png  used 
+on input line 176.
+(pdftex.def)             Requested size: 390.0pt x 138.43114pt.
+ [12 <./images//Immagini_sensore/registro_enable.png>] [13 <./images//Immagini_
+sensore/registro_timing.png> <./images//Immagini_sensore/registro_control.png>]
+<./images//Immagini_sensore/lettura_sensore.png, id=79, 609.02531pt x 207.77625
+pt>
+File: ./images//Immagini_sensore/lettura_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/lettura_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/lettura_sensore.png  used o
+n input line 252.
+(pdftex.def)             Requested size: 390.0pt x 133.05559pt.
+<./images//Immagini_sensore/scrittura_sensore.png, id=80, 718.93594pt x 681.295
+32pt>
+File: ./images//Immagini_sensore/scrittura_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/scrittura_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/scrittura_sensore.png  used
+ on input line 254.
+(pdftex.def)             Requested size: 155.99762pt x 147.82707pt.
+ [14]
+<./images//Immagini_sensore/Sensing_e_macchina_a_stati.png, id=84, 1196.21906pt
+ x 476.53032pt>
+File: ./images//Immagini_sensore/Sensing_e_macchina_a_stati.png Graphic file (t
+ype png)
+<use ./images//Immagini_sensore/Sensing_e_macchina_a_stati.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Sensing_e_macchina_a_stati.
+png  used on input line 265.
+(pdftex.def)             Requested size: 390.0pt x 155.36496pt.
+<./images//Immagini_sensore/sensor_chart.png, id=85, 706.89093pt x 259.7203pt>
+File: ./images//Immagini_sensore/sensor_chart.png Graphic file (type png)
+<use ./images//Immagini_sensore/sensor_chart.png>
+Package pdftex.def Info: ./images//Immagini_sensore/sensor_chart.png  used on i
+nput line 270.
+(pdftex.def)             Requested size: 390.0pt x 143.29045pt.
+
+Overfull \hbox (12.00694pt too wide) in paragraph at lines 283--284
+[]\OT1/cmr/m/n/12 Per finire in-cre-menta un con-ta-tore ogni 200ms per tem-po-
+riz-zare l'attuazione. 
+ []
+
+<./images//Immagini_sensore/voter.png, id=86, 706.89093pt x 259.7203pt>
+File: ./images//Immagini_sensore/voter.png Graphic file (type png)
+<use ./images//Immagini_sensore/voter.png>
+Package pdftex.def Info: ./images//Immagini_sensore/voter.png  used on input li
+ne 288.
+(pdftex.def)             Requested size: 390.0pt x 143.29045pt.
+[15] [16 <./images//Immagini_sensore/lettura_sensore.png> <./images//Immagini_s
+ensore/scrittura_sensore.png> <./images//Immagini_sensore/Sensing_e_macchina_a_
+stati.png>] [17 <./images//Immagini_sensore/sensor_chart.png> <./images//Immagi
+ni_sensore/voter.png>]
+<./images//Immagini_sensore/i2c_test.png, id=98, 1535.7375pt x 766.36313pt>
+File: ./images//Immagini_sensore/i2c_test.png Graphic file (type png)
+<use ./images//Immagini_sensore/i2c_test.png>
+Package pdftex.def Info: ./images//Immagini_sensore/i2c_test.png  used on input
+ line 303.
+(pdftex.def)             Requested size: 390.0pt x 194.61899pt.
+<./images//Immagini_sensore/test_stateflow_2.png, id=99, 2232.84187pt x 660.969
+38pt>
+File: ./images//Immagini_sensore/test_stateflow_2.png Graphic file (type png)
+<use ./images//Immagini_sensore/test_stateflow_2.png>
+Package pdftex.def Info: ./images//Immagini_sensore/test_stateflow_2.png  used 
+on input line 312.
+(pdftex.def)             Requested size: 390.0pt x 115.44948pt.
+<./images//Immagini_sensore/Matlab_completo.png, id=100, 2363.07843pt x 508.148
+44pt>
+File: ./images//Immagini_sensore/Matlab_completo.png Graphic file (type png)
+<use ./images//Immagini_sensore/Matlab_completo.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Matlab_completo.png  used o
+n input line 318.
+(pdftex.def)             Requested size: 390.0pt x 83.86412pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./images//Immagini_sensore/i2c_test.png>] [19 <./images//Immagini_sensore/
+test_stateflow_2.png> <./images//Immagini_sensore/Matlab_completo.png>]
 Chapter 3.
-<./images//Complete_attuation.png, id=24, 1317.42188pt x 252.19218pt>
+<./images//Complete_attuation.png, id=109, 1317.42188pt x 252.19218pt>
 File: ./images//Complete_attuation.png Graphic file (type png)
 <use ./images//Complete_attuation.png>
-Package pdftex.def Info: ./images//Complete_attuation.png  used on input line 6
-5.
+Package pdftex.def Info: ./images//Complete_attuation.png  used on input line 3
+35.
 (pdftex.def)             Requested size: 390.0pt x 74.65771pt.
-[5
+[20
 
  <./images//Complete_attuation.png>]
-<./images//Path_structure.png, id=29, 526.96875pt x 293.59688pt>
+<./images//Path_structure.png, id=114, 526.96875pt x 293.59688pt>
 File: ./images//Path_structure.png Graphic file (type png)
 <use ./images//Path_structure.png>
-Package pdftex.def Info: ./images//Path_structure.png  used on input line 84.
+Package pdftex.def Info: ./images//Path_structure.png  used on input line 354.
 (pdftex.def)             Requested size: 390.0pt x 217.29411pt.
- [6 <./images//Path_structure.png>]
-[7]
-<./images//Harness.png, id=39, 1044.15094pt x 472.01344pt>
+ [21 <./images//Path_structure.png>]
+[22]
+<./images//Harness.png, id=122, 1044.15094pt x 472.01344pt>
 File: ./images//Harness.png Graphic file (type png)
 <use ./images//Harness.png>
-Package pdftex.def Info: ./images//Harness.png  used on input line 129.
+Package pdftex.def Info: ./images//Harness.png  used on input line 399.
 (pdftex.def)             Requested size: 390.0pt x 176.29877pt.
- [8 <./images//Harness.png>]
+ [23 <./images//Harness.png>]
 Chapter 4.
-<./images//Blender3D.png, id=44, 318.43968pt x 313.17pt>
+<./images//Blender3D.png, id=127, 318.43968pt x 313.17pt>
 File: ./images//Blender3D.png Graphic file (type png)
 <use ./images//Blender3D.png>
-Package pdftex.def Info: ./images//Blender3D.png  used on input line 148.
+Package pdftex.def Info: ./images//Blender3D.png  used on input line 418.
 (pdftex.def)             Requested size: 390.0pt x 383.54341pt.
-[9
+[24
 
-] [10 <./images//Blender3D.png>]
+] [25 <./images//Blender3D.png>]
 Chapter 5.
-[11
+[26
 
 ]
 Chapter 6.
 
-Overfull \hbox (6.26256pt too wide) in paragraph at lines 164--165
+Overfull \hbox (6.26256pt too wide) in paragraph at lines 434--435
 []\OT1/cmr/m/n/12 Riguardo la parte di at-tuazione, i due pas-saggi chi-ave son
 o stati la riduzione
  []
 
-[12
+[27
 
 ] (report_attuazione.aux) ) 
 Here is how much of TeX's memory you used:
- 1396 strings out of 476331
- 24383 string characters out of 5787765
- 1854660 words of memory out of 5000000
- 21864 multiletter control sequences out of 15000+600000
+ 1588 strings out of 476331
+ 32614 string characters out of 5787765
+ 1861660 words of memory out of 5000000
+ 22035 multiletter control sequences out of 15000+600000
  518438 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,377b,228s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,9n,62p,596b,231s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\marpe\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/marpe/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/marpe/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/marpe/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/marpe/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report_attuazione.pdf (13 pages, 222508 bytes).
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/marpe/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/marpe/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ma
+rpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+Users/marpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Users/marpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/marpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmti12.pfb>
+Output written on report_attuazione.pdf (28 pages, 2274043 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 180 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

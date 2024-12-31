@@ -1,12 +1,24 @@
-\contentsline {chapter}{\numberline {1}Introduzione}{2}{}%
-\contentsline {section}{\numberline {1.1}Divisione delle funzioni}{2}{}%
-\contentsline {section}{\numberline {1.2}Modalità d'uso}{3}{}%
-\contentsline {chapter}{\numberline {2}Percezione}{4}{}%
-\contentsline {chapter}{\numberline {3}Attuazione}{5}{}%
-\contentsline {section}{\numberline {3.1}Principio di funzionamento}{5}{}%
-\contentsline {section}{\numberline {3.2}Reimpostazione periodica del PWM}{7}{}%
-\contentsline {section}{\numberline {3.3}Cinematica inversa}{7}{}%
-\contentsline {section}{\numberline {3.4}Test}{7}{}%
-\contentsline {chapter}{\numberline {4}Verifica finale}{9}{}%
-\contentsline {chapter}{\numberline {5}Problemi durante lo sviluppo}{11}{}%
-\contentsline {chapter}{\numberline {6}Conclusione}{12}{}%
+\contentsline {chapter}{\numberline {1}Introduzione}{4}{}%
+\contentsline {section}{\numberline {1.1}Divisione delle funzioni}{4}{}%
+\contentsline {section}{\numberline {1.2}Modalità d'uso}{5}{}%
+\contentsline {chapter}{\numberline {2}Percezione}{6}{}%
+\contentsline {section}{\numberline {2.1}Sensore di colore}{6}{}%
+\contentsline {section}{\numberline {2.2}TAOS TCS3472}{6}{}%
+\contentsline {section}{\numberline {2.3}I2C}{8}{}%
+\contentsline {section}{\numberline {2.4}Macchina a Stati sensore}{10}{}%
+\contentsline {section}{\numberline {2.5}Parametri scelti}{10}{}%
+\contentsline {section}{\numberline {2.6}Command}{11}{}%
+\contentsline {section}{\numberline {2.7}Enable}{11}{}%
+\contentsline {section}{\numberline {2.8}Timing e Control}{12}{}%
+\contentsline {section}{\numberline {2.9}Lettura}{15}{}%
+\contentsline {section}{\numberline {2.10}Macchina a stati}{15}{}%
+\contentsline {section}{\numberline {2.11}Voter}{15}{}%
+\contentsline {section}{\numberline {2.12}Test}{18}{}%
+\contentsline {chapter}{\numberline {3}Attuazione}{20}{}%
+\contentsline {section}{\numberline {3.1}Principio di funzionamento}{20}{}%
+\contentsline {section}{\numberline {3.2}Reimpostazione periodica del PWM}{22}{}%
+\contentsline {section}{\numberline {3.3}Cinematica inversa}{22}{}%
+\contentsline {section}{\numberline {3.4}Test}{22}{}%
+\contentsline {chapter}{\numberline {4}Verifica finale}{24}{}%
+\contentsline {chapter}{\numberline {5}Problemi durante lo sviluppo}{26}{}%
+\contentsline {chapter}{\numberline {6}Conclusione}{27}{}%
