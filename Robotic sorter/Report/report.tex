@@ -1,0 +1,470 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{float}
+\graphicspath{ {./images/} }
+
+\title{{Progetto di Meccatronica}\\{Robotic sorter}}
+
+\author{{Tosi Ubaldo}\\{Passerella Filippo}}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{Introduzione}
+
+Abbiamo realizzato il controllo di un manipolatore per smistamento di cubi colorati.
+
+Il sistema riconosce il colore del cubo posto sull'apposita pedana e lo riposiziona nella zona appropriata. Poi torna alla posizione iniziale, in attesa del cubo seguente.
+
+Abbiamo provato il sistema in più condizioni e non ci sono noti casi di malfunzionamento in ambiente adatto.
+
+\section{Divisione delle funzioni}
+
+Abbiamo deciso di dividere il programma finale in due parti, un modulo di percezione e un modulo di attuazione.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Modules}
+\caption{Moduli}
+\end{figure}
+
+Il primo si occupa di interfacciarsi con il sensore di colore e temporizzare il secondo. Il secondo controlla il manipolatore e gestisce i percorsi.
+
+Le funzioni dei due moduli erano sufficientemente indipendenti da poter essere sviluppati e verificati parallelamente.
+
+Ottenuti dei prototipi funzionanti dei due moduli, abbiamo definito l'interfaccia che ha poi determinato la loro versione finale.
+
+\section{Modalità d'uso}
+
+Innanzitutto, occorre collegare l'hardware e accendere il dispositivo.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+    Collegamento & Porta & Pin \\
+    I2C SCL & PTA-3 & J1-3 \\
+    I2C SDA & PTA-2 & J1-1 \\
+    5V sensore &  & J3-9 \\
+    GND sensore &  & J3-11 \\
+    GND servo &  & J3-13 \\
+    PWM M1 & PTB-12 & J4-3 \\
+    PWM M2 & PTB-13 & J5-11 \\
+    PWM M3 & PTC-2 & J5-15 \\
+    PWM M4 & PTC-3 & J4-16 \\
+    PWM M5 & PTB-4 & J2-7 \\
+    PWM M6 & PTB-5 & J2-5 \\
+
+\end{tabular}
+\end{table}
+
+Si vedrà il braccio posizionarsi nella configurazione di attesa.
+
+Posizionare un cubo colorato sulla pedana e premere \emph{sw2}.
+
+Il manipolatore sposterà il cubo nella zona appropriata e tornerà nella configurazione di attesa.
+
+\chapter{Percezione}
+\section {Sensore di colore}
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \includegraphics[width=0.8\linewidth]{images/Immagini sensore/pcb sensore.png}
+    \caption{PCB Sensore}
+\end{wrapfigure}
+Il PCB del sensore di colore è costituito dal sensore di colore vero e proprio (TAOS TCS3472), un led bianco che permette di illuminare gli oggetti per misurare il colore della luce riflessa 
+(spegnibile nel caso in cui si voglia misurare il colore di una luce ambientale) un regolatore $5V \rightarrow 3.3V$ che ci permette di alimentare 
+il sensore a 5V e di usare la I2C a 5V per comunicare con il sensore grazie a due transistori messi come in figura. Inoltre integra le resistenze di pull-up per la I2C.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/Immagini sensore/I2C_3.3 to 5.png}
+    \caption{I2C}
+\end{figure}
+
+\section{TAOS TCS3472}
+
+\begin{figure} [H]
+    \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.8\textwidth]{images/Immagini sensore/Blocco funzionale.png}
+    \caption{Blocco funzionale}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+    \includegraphics[width=0.4\textwidth]{images/Immagini sensore/sensore.png}
+    \caption{Matrice fotodiodi sensore}
+    \end{subfigure}
+\end{figure}
+
+Il sensore è costituito da una matrice 3x4 di fotodiodi con un filtro rosso, blu, verde e non filtrati (luce bianca). 
+
+Tutti i fotodiodi hanno un filtro ad infrarossi per aumentare l'accuratezza. 
+La corrente generata da questi fotodiodi viene amplificata da un amplificatore trans-resistivo a guadagno programmabile e campionata da un ADC integrativo a 16 bit per ogni colore. 
+
+Il tempo di integrazione è programmabile. I dati poi vengono comunicati all'esterno attraverso l'interfaccia I2C (fino a 400 KHz). 
+
+Il sensore può mandare un interrupt una volta che il valore del clear è sopra o sotto una certa threshold.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/Immagini sensore/Responsività sensore.png}
+    \caption{Responsività del sensore}
+\end{figure}
+
+Come si può vedere dall'immagine il sensore risponde molto bene al rosso e la responsività diminuisce andando verso il verde ed il blu questo come potremo vedere più avanti, 
+unito al fatto che la luce del led tende al giallo porterà a problemi nella misura.
+
+\subsection{I2C}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{images/Immagini sensore/I2C.png}
+    \caption{I2C}
+\end{figure}
+
+Come possiamo vedere la scrittura dei registri mediante I2C viene fatta mandando per prima cosa lo start bit, poi l'indirizzo della periferica e il write.
+Una volta ricevuto l'acknowledge si manda il Command code. 
+ 
+Questo configura il registro di Command.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/Immagini sensore/registro di command.png}
+    \caption{Registro Command}
+    \label{fig:comm}
+\end{figure}
+
+Nel registro di Command possiamo stabilire se far leggere sempre lo stesso registro o scorrerli e da che indirizzo iniziare oltre che pulire l'interrupt.
+
+Per la lettura una volta settato correttamente il registro command basta mandare lo start, l'indirizzo della periferica ed il read ed il sensore continuerà dopo ogni ack a mandare il dato successivo fino alla ricezione dello stop bit.
+
+\subsection{Macchina a Stati sensore}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.35\textwidth]{images/Immagini sensore/macchina a stati.png}
+    \caption{Macchina a stati}
+\end{figure}
+
+Il sensore per risparmiare energia rimane nello stato di sleep, una volta ricevuto lo start bit dell'I2C va in idle ed in base a se è settato il bit di wait o meno esegue subito la misura oppure aspetta un certo tempo.
+
+Una volta fatta la misura torna in idle e in caso di power on disabilitato torna in sleep. La macchina a stati dipende principalmente dai parametri del registro Enable (0x00).
+
+\subsection{Registri}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/Immagini sensore/Indirizzi sensore.png}
+    \caption{Registri sensore}
+\end{figure}
+
+\subsubsection{Valori scelti}
+
+\label{subsec:Valori sensore}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+        Indirizzo & Nome & Valore \\
+             & Command & 10100000 \\
+        0x00 & Enable & 0x03 \\
+        0x01 & Timing & 0xC0 \\
+        0x0F & Control & 0x03
+    \end{tabular}
+    \caption{Indirizzi settati}
+    \label{tab:my_label}
+\end{table}
+
+\subsubsection{Command}
+
+Come visibile nella figura \ref{fig:comm} per effettuare la lettura e scrittura abbiamo deciso di usare registro di Enable (0x00) come primo registro e di eseguire la lettura e scrittura sequenziale degli indirizzi.
+
+\subsubsection{Enable}
+
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.65\linewidth]{images/Immagini sensore/registro enable.png}
+    \caption{Enable Register}
+\end{figure}
+
+Come scritto nella sezione \ref{subsec:Valori sensore} abbiamo ovviamente settato il power on e gli ADC.
+
+$\grave{E}$ stato scelto di non utilizzare l'interrupt per decidere quando leggere il sensore ma piuttosto di fare un polling alla pressione di un pulsante ed eseguire a quel punto tre misure implementando un voter, 
+questo perché i livelli di luminosità registrati dal sensore non permettevano di distinguere in modo univoco la presenza del cubo e dipendevano particolarmente dal colore del cubo.
+
+Non è stato utilizzato lo stato di \textbf{wait} in quanto per la nostra applicazione abbiamo preferito dare priorità alla velocità di lettura che al power management tenendo conto che vengono eseguite tre letture del sensore.
+
+\subsubsection{Timing e Control}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{images/Immagini sensore/registro timing.png}
+    \caption{Registro timing}
+    \includegraphics[width=0.65\linewidth]{images/Immagini sensore/registro control.png}
+    \caption{Registro control}
+    \end{figure}
+
+    I valori dei registri di \textbf{Timing} e \textbf{Control} sono stati scelti in tandem in quanto sono i valori che influenzano la lettura e la sua accuratezza. 
+
+    Il registro di timing modifica il tempo di integrazione degli ADC e quindi influisce sulla sensibilità e sulla risoluzione della misura mentre quello di control determina il guadagno dell'amplificatore. 
+    Per il timing ci siamo imposti un tempo massimo per le 3 misure di 1,5 secondi. Sapendo che \[Timing = (0xFF - 0xATIME) * 2.4ms\] possiamo calcolare \[ATIME_{min} = 0x2A\] 
+    Inizialmente utilizzato il massimo guadagno (x60) e successivamente aumentato il tempo di integrazione fino a raggiungere dei livelli accettabili per tutti i coloti, evitando la saturazione o valori troppo bassi.
+    \[ATIME_{1} = 0xC0 \Rightarrow Timing = 154ms\] 
+    così da avere un buon compromesso tra il tempo di integrazione, la risoluzione e la sensibilità dei valori misurati. 
+    Successivamente abbiamo fatto una prova usando il massimo tempo di integrazione considerato accettabile \[ATIME_{2} = 0x2A \Rightarrow Timing = 510ms\] ed aumentato il guadagno fino ad arrivare ad un valore 
+    né troppo basso né in saturazione ovvero \emph{x16}.
+
+    \label{subsubsec:Timing}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ccc}
+            Registro & Configurazione 1 & Configurazione 2\\
+             Timing& 0xC0 & 0x2A\\
+             Control& 0x03 & 0x02\\
+        \end{tabular}
+        \caption{Configurazioni}
+        \label{tab:configurazioni}
+    \end{table}
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{ccc}
+            Registro & Configurazione 1 & Configurazione 2\\
+             $Red_L$& 01 & 6A\\
+             $Red_H$& FF & D6\\
+             $Green_L$& 31 & E4\\
+             $Green_H$& 2F & 26\\
+             $Blue_L$& 62 & 97\\
+             $Blue_H$& 25 & 1F\\
+        \end{tabular}
+        \caption{Cubo rosso}
+        \label{tab:cubo_rosso}
+    \end{table}
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{ccc}
+            Registro & Configurazione 1 & Configurazione 2\\
+             $Red_L$& 2D & E4\\
+             $Red_H$& 49 & 43\\
+             $Green_L$& 03 & 2B\\
+             $Green_H$& 80 & 79\\
+             $Blue_L$& 77 & F4\\
+             $Blue_H$& 6C & 66
+        \end{tabular}
+        \caption{Cubo blu}
+        \label{tab:cubo_blu}
+        \end{table}
+
+        \begin{table}[H]
+        \centering
+        \begin{tabular}{ccc}
+            Registro & Configurazione 1 & Configurazione 2\\
+             $Red_L$& 79 & 48\\
+             $Red_H$& 5A & 55\\
+             $Green_L$& CD & 89\\
+             $Green_H$& 80 & 7C\\
+             $Blue_L$& 9A & 6C\\
+             $Blue_H$& 3D & 38
+        \end{tabular}
+        \caption{Cubo verde}
+        \label{tab:cubo_verde}
+    \end{table}
+
+Vedendo che la differenza tra le due configurazioni era trascurabile si è optato per l'uso della prima così da risparmiare un secondo nella misura.
+
+Un problema riscontrato è stato quello della misura del cubo blu in quanto il colore dal valore più alto è risultato il verde mentre il blu era il secondo più alto. 
+
+Provando a cambiare colore con un cartoncino più scuro il colore con il valore più alto risultava invece il rosso a causa del grande assorbimento di luce del cartoncino blu scuro, al fatto che la 
+luce del led in dotazione tendeva verso il giallo (componente rossa più accentuata) e alla maggior responsività alla luce rossa e verde rispetto alla blu.
+
+\section{Implementazione}
+
+\subsection{Lettura e scrittura del sensore}
+
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=0.76\linewidth]{images/Immagini sensore/lettura sensore.png}
+    \caption{lettura sensore}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/Immagini sensore/scrittura sensore.png}
+    \caption{scrittura sensore}
+\end{figure}
+
+Si è deciso di leggere tutti i blocchi ogni volta che fosse stata necessaria la lettura per evitare dopo la scrittura di dover riscrivere il registro command con il nuovo indirizzo di partenza visto che
+ il guadagno in termini di tempo sarebbe stato trascurabile. Una volta eseguita la lettura di fa la somma pesata dei valori H e L dei registri di ogni colore per avere il valore effettivo a 16 bit.
+
+\subsection{Macchina a stati}
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/Immagini sensore/Sensing e macchina a stati.png}
+    \caption{Matlab sensing}
+    \end{figure}
+
+\begin{figure}[h]
+    \includegraphics[width=0.8\linewidth]{images/Immagini sensore/sensor_chart.png}
+    \caption{Macchina a stati}
+    \label{fig:stateflow}
+\end{figure}
+
+Come possiamo vedere nella figura \ref{fig:stateflow} all'accensione viene configurato il sensore e messo colore a 4 per mettere il braccio ad una posizione di default.
+
+Successivamente si entra in uno stato di \textbf{WAIT} in cui si resettano tutti i contatori. 
+
+Premendo il pulsante \emph{sw2} si passa allo stato di \textbf{RESET} del voter, poi si eseguono tre letture con conseguente decisione del colore per ogni misura. 
+
+A quel punto il \textbf{VOTER} decide il colore del cubo se vi sono due colori uguali oppure rifà le misure se sono tutti e tre diversi. Per finire incrementa un contatore ogni 200ms per temporizzare l'attuazione.
+
+$\grave{E}$ stato necessario implementare un voter in quanto durante i test la prima misura poteva risultare diversa soprattutto nel caso del blu per cui si è deciso di applicare una ridondanza a scapito della 
+velocità di misura. Per le ragioni esposte nella sezione \ref{subsubsec:Timing} nel blocco color detection è stato necessario per il riconoscimento del cubo blu stabilire che blu dovesse avere un valore 
+compreso tra quello del verde e quello del rosso.
+
+\subsection{Test}
+
+Purtroppo non è stato possibile fare il PIL dei blocchi contenenti la comunicazione via I2C in quanto Matlab dava errore in caso di presenza dei blocchi di send e receive via I2C.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/Immagini sensore/i2c_test.png}
+    \caption{Test I2C}
+\end{figure}
+Per eseguire i test della parte di sensore inizialmente è stato fatto un file Matlab che si occupava solo di comunicare con il sensore e mandare i dati ricevuti via uart al pc così da poter valutare i parametri migliori per il sensore.
+Una volta individuati è stata fatta la macchina a stati e testata prima in MIL e poi usando la uart e il led rgb per il debug.
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/Immagini sensore/test_stateflow_2.png}
+    \caption{Test macchina a stati}
+\end{figure}
+
+\chapter{Attuazione}
+
+Il modulo di attuazione controlla l'uscita PWM per i servo-motori per guidare il braccio robotico lungo percorsi predefiniti.
+
+Due input determinano il percorso da seguire e il punto corrente del percorso.
+
+Altri input e output sono usati solo in fase di debug.
+
+Il modulo è stato ideato per permettere un controllo semplice della velocità di esecuzione e flessibilità nella scelta del percorso.
+
+\section{Principio di funzionamento}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Complete_attuation}
+\caption{Diagramma completo}
+\end{figure}
+
+I blocchi \textbf{Path1...Path4} restituiscono ognuno una matrice costante che rappresenta un percorso per il braccio robotico. Ogni riga rappresenta un punto chiave del percorso. A partire dai punti chiave vengono successivamete calcolati punti intermedi.
+
+Ogni riga contiene 7 elementi:
+
+\begin{itemize}
+\item Distanza radiale in coordinate cilindriche dell'obiettivo dal centro della base del braccio robotico.
+\item Angolo in cordinate cilindriche dell'obiettivo.
+\item Distanza verticale in coordinate cilindriche dell'obiettivo dalla base del braccio robotico.
+\item Angolo tra il vettore parallelo all'ultimo segmento del manipolatore (positivo verso la pinza) e la verticale (positiva verso l'alto).
+\item Angolo del polso.
+\item Angolo di chiusura della pinza.
+\item Istante temporale del punto nel percorso.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Path_structure}
+\caption{Esempio di percorso}
+\end{figure}
+
+L'input \textbf{Selector} determina quale percorso verrà usato.
+
+Il blocco \textbf{Interpolate} genera un punto intermedio interpolando linearmente due punti successivi nel percorso in base all'input \textbf{Time}.
+
+Parte del blocco serve a garantire le corrette dimensioni della matrice in ingresso.
+
+Vengono usati i punti estremi se \textbf{Time} eccede gli istanti temporali estremi.
+
+Il blocco successivo calcola gli angoli dei servo-motori a partire dal punto interpolato.
+
+Lo switch che segue permette di sostituire gli angoli calcolati con angoli predefiniti, per portare il manipolatore in una configurazione sicura durante il debug.
+
+Il blocco \textbf{PWM-driver} imposta le uscite PWM a partire dagli angoli desiderati.
+
+Questo blocco viene eseguito solo se gli angoli desiderati cambiano.
+
+\section{Reimpostazione periodica del PWM}
+
+Se il blocco \textbf{PWM-driver} venisse attivato liberamente (senza trigger al cambiamento) i servo-motori subirebbero uno scatto dovuto alla reimpostazione del PWM, che avviene anche quando i duty-cycle non variano.
+
+Per questo è importante usare il blocco \textbf{Detect Change}. 
+
+\section{Cinematica inversa}
+
+Ci sono 6 motori in totale, denominati da M1 a M6.
+
+M6 controlla la chiusura della pinza, M5 la rotazione del polso. I motori che determinano posizione e orientazione dell'end-effector sono 4.
+
+M2, M3 e M4 possono spostare l'end-effector solo sul piano determinato da M1. Fissata la posizione dell'end-effector, è determinata la rotazione di M1 per avere l'allineamento. Fissata anche l'orientazione finale desiderata, anche la posizione di M4 è identificata. Data questa, M2 e M3 formano uno Scara con M4 come end-effector.
+
+\section{Test}
+
+Il sistema di attuazione è stato prima verificato in SIL e in PIL in più iterazioni.
+
+Sono stati progressivamente aggiunti blocchi ad ogni iterazione che ha avuto successo, in questo ordine: PWM-driver, IK, Interpolate, Selector.
+
+Le uscite di debug mostrano la posizione desiderata, gli angoli previsti e i duty cycle impostati.
+
+Un input di debug permette di riportare il braccio in una posizione sicura ed è stato usato in PIL.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Harness}
+\caption{Harness del modulo di attuazione (screenshot scattato a fine progetto, differisce parzialmente da quello usato).}
+\end{figure}
+
+\chapter{Verifica finale}
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/Immagini sensore/Matlab_completo.png}
+    \caption{MIL completo}
+\end{figure}
+
+Sviluppati e verificati indipendentemente i due moduli, abbiamo cominciato la fase finale.
+
+I due moduli sono stati combinati velocemente, grazie alla semplice interfaccia.
+
+Ci siamo accorti di non poter fare simulazioni \emph{in the loop} perché incompatibili con la periferica I2C.
+
+Abbiamo usato la UART per verificare che tutto proseguisse come previsto durante la verifica.
+
+Non abbiamo riscontrato problemi oltre all'impossibilità di usare SIL/PIL o i timer (per mandare messaggi temporizzati tramite UART). Così abbiamo subito potuto definire e verificare i percorsi.
+
+Avevamo preparato delle bozze dei percorsi usando un modello del braccio realizzato e animato su Blender3D. Modificando queste in base alle verifiche abbiamo ottenuto dei percorsi che ci soddisfacessero.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Blender3D}
+\caption{Armatura del braccio su Blender3D}
+\end{figure}
+
+\chapter{Problemi durante lo sviluppo}
+
+Durante i test PIL, due pezzi stampati 3D per la trasmissione della coppia da servo-motori a struttura si sono rotti. In particolare si sono spanati gli incastri per i servo-motori.
+
+Il primo guasto è stato dovuto a un blocca di ritardo nell'harness: la condizione iniziale ha fatto piegare il braccio su se stesso all'avvio.
+
+Il secondo guasto è stato dovuto alla base fissata male (svitando le viti si sono rovinati i fori) in seguito alle riparazioni del guasto precedente..
+
+Altri problemi sono stati riscontrati durante la fase di test del sensore in quanto risultava difficoltoso trovare un materiale che non fosse troppo assorbente o riflettente e un blu non fosse troppo scuro o troppo chiaro così da
+
+poter distinguere il blu in modo affidabile dagli altri colori.
+
+\chapter{Conclusione}
+
+Realizzata la parte funzionale, abbiamo preparato una base pieghevole su cui abbiamo montato la pedana di riconoscimento e dei cartoncini colorati per indicare le zone di smistamento.
+
+Riguardo la parte di attuazione, i due passaggi chiave sono stati la riduzione dell'algoritmo IK a quello di uno scara e l'uso estensivo di SIL e PIL.
+
+Mentre per quanto riguarda la fase di percezione i passaggi chiave sono stati la scelta dei parametri del sensore con la scelta dei colori e finiture migliori dei cubi colorati, l'uso della UART per il debug e l'interpretazione di un voter.
+
+Noi possiamo ritenere con soddisfazione questo progetto un successo, dal punto di vista sia del risultato finale, sia della flessibilità e futura modificabilità della funzione, sia del processo in sé.
+
+\end{document}
