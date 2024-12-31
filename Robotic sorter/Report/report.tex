@@ -70,102 +70,99 @@ Il manipolatore sposterà il cubo nella zona appropriata e tornerà nella config
 
 \chapter{Percezione}
 \section {Sensore di colore}
-\begin{wrapfigure}{r}{0.3\textwidth}
-    \includegraphics[width=0.8\linewidth]{images/Immagini sensore/pcb sensore.png}
-    \caption{PCB Sensore}
-\end{wrapfigure}
-Il PCB del sensore di colore è costituito dal sensore di colore vero e proprio (TAOS TCS3472), un led bianco che permette di illuminare gli oggetti per misurare il colore della luce riflessa 
-(spegnibile nel caso in cui si voglia misurare il colore di una luce ambientale) un regolatore $5V \rightarrow 3.3V$ che ci permette di alimentare 
-il sensore a 5V e di usare la I2C a 5V per comunicare con il sensore grazie a due transistori messi come in figura. Inoltre integra le resistenze di pull-up per la I2C.
+
 \begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/Immagini sensore/I2C_3.3 to 5.png}
+\centering
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/pcb_sensore.png}
+    \caption{PCB Sensore}
+\end{figure}
+
+Il PCB del sensore di colore è costituito da
+
+\begin{itemize}
+\item il sensore di colore vero e proprio (TAOS TCS3472)
+\item un led bianco (che permette di illuminare gli oggetti per misurare il colore della luce riflessa), spegnibile nel caso in cui si voglia misurare il colore di uno schermo o comunque qualcosa che emette luce propria
+\item un regolatore $5V \rightarrow 3.3V$, che ci permette di alimentare il sensore a 5V e di usare la I2C a 5V per comunicare con il sensore (grazie a due transistori messi come in figura \ref{fig:I2C})
+\item resistenze di pull-up
+\end{itemize}
+
+\begin{figure}
+\centering
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/I2C_3V3_to_5.png}
     \caption{I2C}
+    \label{fig:I2C}
 \end{figure}
 
 \section{TAOS TCS3472}
 
-\begin{figure} [H]
-    \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.8\textwidth]{images/Immagini sensore/Blocco funzionale.png}
+\begin{figure}
+\centering
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/Blocco_funzionale.png}
     \caption{Blocco funzionale}
-    \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
-    \includegraphics[width=0.4\textwidth]{images/Immagini sensore/sensore.png}
+\end{figure}
+    
+\begin{figure}
+\centering
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/sensore.png}
     \caption{Matrice fotodiodi sensore}
-    \end{subfigure}
 \end{figure}
 
-Il sensore è costituito da una matrice 3x4 di fotodiodi con un filtro rosso, blu, verde e non filtrati (luce bianca). 
+Il sensore è costituito da una matrice 3x4 di fotodiodi con un filtro rosso, blu, verde e non filtrati (luce bianca). Tutti i fotodiodi hanno un filtro ad infrarossi per aumentare l'accuratezza. 
 
-Tutti i fotodiodi hanno un filtro ad infrarossi per aumentare l'accuratezza. 
-La corrente generata da questi fotodiodi viene amplificata da un amplificatore trans-resistivo a guadagno programmabile e campionata da un ADC integrativo a 16 bit per ogni colore. 
+La corrente generata da questi fotodiodi viene amplificata da un amplificatore trans-resistivo a guadagno variabile e campionata da un ADC integrativo a 16 bit per ogni colore. Il tempo di integrazione è programmabile. I dati poi vengono comunicati all'esterno attraverso l'interfaccia I2C (fino a 400 KHz).
 
-Il tempo di integrazione è programmabile. I dati poi vengono comunicati all'esterno attraverso l'interfaccia I2C (fino a 400 KHz). 
+ Il sensore può mandare un interrupt una volta che il valore del clear è sopra o sotto una certa threshold.
 
-Il sensore può mandare un interrupt una volta che il valore del clear è sopra o sotto una certa threshold.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.25\textwidth]{images/Immagini sensore/Responsività sensore.png}
+\begin{figure}
+\centering
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/Responsività_sensore.png}
     \caption{Responsività del sensore}
 \end{figure}
 
-Come si può vedere dall'immagine il sensore risponde molto bene al rosso e la responsività diminuisce andando verso il verde ed il blu questo come potremo vedere più avanti, 
-unito al fatto che la luce del led tende al giallo porterà a problemi nella misura.
+Come si può vedere dall'immagine, il sensore risponde molto bene al rosso e la responsività diminuisce andando verso il verde ed il blu. Questo, come potremo vedere più avanti, unito al fatto che la luce del led tende al giallo, porterà a problemi nella misura.
 
-\subsection{I2C}.
+\section{I2C}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.70\textwidth]{images/Immagini sensore/I2C.png}
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/I2C.png}
     \caption{I2C}
 \end{figure}
 
-Come possiamo vedere la scrittura dei registri mediante I2C viene fatta mandando per prima cosa lo start bit, poi l'indirizzo della periferica e il write.
-Una volta ricevuto l'acknowledge si manda il Command code. 
- 
-Questo configura il registro di Command.
+La scrittura dei registri mediante I2C viene fatta mandando per prima cosa lo start bit, poi l'indirizzo della periferica e il write. Una volta ricevuto l'acknowledge si manda il Command code. Questo configura il registro di Command.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{images/Immagini sensore/registro di command.png}
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/registro_di_command.png}
     \caption{Registro Command}
     \label{fig:comm}
 \end{figure}
 
-Nel registro di Command possiamo stabilire se far leggere sempre lo stesso registro o scorrerli e da che indirizzo iniziare oltre che pulire l'interrupt.
+Nel registro di Command possiamo stabilire se far leggere sempre lo stesso registro o scorrerli e da che indirizzo iniziare. Inoltre possiamo pulire gli interrupt.
 
-Per la lettura una volta settato correttamente il registro command basta mandare lo start, l'indirizzo della periferica ed il read ed il sensore continuerà dopo ogni ack a mandare il dato successivo fino alla ricezione dello stop bit.
+Per la lettura, una volta impostato correttamente il registro command, basta mandare lo start, l'indirizzo e il read e lui continuerà dopo ogni ack a mandare il dato successivo fino a che non riceve lo stop bit.
 
-\subsection{Macchina a Stati sensore}
-
-\begin{figure}[h]
+\section{Macchina a Stati sensore}
+\begin{figure}
     \centering
-    \includegraphics[width=0.35\textwidth]{images/Immagini sensore/macchina a stati.png}
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/macchina_a_stati.png}
     \caption{Macchina a stati}
 \end{figure}
 
-Il sensore per risparmiare energia rimane nello stato di sleep, una volta ricevuto lo start bit dell'I2C va in idle ed in base a se è settato il bit di wait o meno esegue subito la misura oppure aspetta un certo tempo.
+Il sensore per risparmiare energia rimane nello stato di sleep. Una volta che riceve lo start dall'I2C va in idle ed in base a se è impostato il bit di wait o meno fa subito la misura oppure aspetta un certo tempo.
 
 Una volta fatta la misura torna in idle e in caso di power on disabilitato torna in sleep. La macchina a stati dipende principalmente dai parametri del registro Enable (0x00).
 
-\subsection{Registri}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{images/Immagini sensore/Indirizzi sensore.png}
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/Indirizzi_sensore.png}
     \caption{Registri sensore}
-\end{figure}
+\end{figure} 
 
-\subsubsection{Valori scelti}
-
-\label{subsec:Valori sensore}
-\begin{table}[h]
+\section{Parametri scelti}
+\label{sec:Parametri sensore}
+\begin{table}
     \centering
     \begin{tabular}{ccc}
         Indirizzo & Nome & Valore \\
-             & Command & 10100000 \\
+        ---- & Command & 10100000 \\
         0x00 & Enable & 0x03 \\
         0x01 & Timing & 0xC0 \\
         0x0F & Control & 0x03
@@ -174,47 +171,42 @@ Una volta fatta la misura torna in idle e in caso di power on disabilitato torna
     \label{tab:my_label}
 \end{table}
 
-\subsubsection{Command}
+Solo questi registri sono stati settati in quanto abbiamo scelto di non utilizzare l'interrupt per decidere quando leggere il sensore, ma piuttosto di fare un polling alla pressione di un pulsante ed eseguire a quel punto 3 misure così da implementare un voter.
 
-Come visibile nella figura \ref{fig:comm} per effettuare la lettura e scrittura abbiamo deciso di usare registro di Enable (0x00) come primo registro e di eseguire la lettura e scrittura sequenziale degli indirizzi.
+Questo perché i livelli di luminosità registrati dal sensore erano simili tra con il cubetto sopra e senza e variavano più in base al colore del cubetto che dal fatto che fosse sopra o no.
 
-\subsubsection{Enable}
+\section{Command}
+Come visibile nella figura \ref{fig:comm} per fare la lettura e scrittura abbiamo deciso di usare registro di Enable come primo registro e di fare le letture sequenziali degli indirizzi.
 
-\begin{figure}[H] 
-    \centering
-    \includegraphics[width=0.65\linewidth]{images/Immagini sensore/registro enable.png}
+\section{Enable}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/registro_enable.png}
     \caption{Enable Register}
 \end{figure}
 
-Come scritto nella sezione \ref{subsec:Valori sensore} abbiamo ovviamente settato il power on e gli ADC.
+Come scritto nella sezione \ref{sec:Parametri sensore} abbiamo ovviamente attivato il power on e gli ADC mentre non abbiamo attivato gli interrupt e il wait.
 
-$\grave{E}$ stato scelto di non utilizzare l'interrupt per decidere quando leggere il sensore ma piuttosto di fare un polling alla pressione di un pulsante ed eseguire a quel punto tre misure implementando un voter, 
-questo perché i livelli di luminosità registrati dal sensore non permettevano di distinguere in modo univoco la presenza del cubo e dipendevano particolarmente dal colore del cubo.
+Non è stato attivato il wait in quanto per la nostra applicazione abbiamo preferito dare priorità alla velocità di lettura che al power management tenendo anche conto che si fanno 3 letture del sensore ogni volta.
 
-Non è stato utilizzato lo stato di \textbf{wait} in quanto per la nostra applicazione abbiamo preferito dare priorità alla velocità di lettura che al power management tenendo conto che vengono eseguite tre letture del sensore.
-
-\subsubsection{Timing e Control}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.65\linewidth]{images/Immagini sensore/registro timing.png}
+\section{Timing e Control}
+\begin{figure} 
+    \includegraphics[width=\textwidth]{Immagini_sensore/registro_timing.png}
     \caption{Registro timing}
-    \includegraphics[width=0.65\linewidth]{images/Immagini sensore/registro control.png}
+    \includegraphics[width=\textwidth]{Immagini_sensore/registro_control.png}
     \caption{Registro control}
-    \end{figure}
+\end{figure}
+    
+I valori dei registri di timing e control sono stati scelti in tandem in quanto sono i valori che influenzano la lettura e la sua accuratezza. Il registro di timing modifica il tempo di integrazione degli ADC e quindi influisce sulla sensibilità e sulla risoluzione della misura mentre quello di control determina il guadagno dell'amplificatore.
 
-    I valori dei registri di \textbf{Timing} e \textbf{Control} sono stati scelti in tandem in quanto sono i valori che influenzano la lettura e la sua accuratezza. 
+Inizialmente per il timing ci siamo imposti un tempo massimo per le 3 misure di $1.5$ secondi. Sapendo che $Timing = (0xFF - 0xATIME) * 2.4ms$ Possiamo calcolare il \(ATIME_{min} = 0x2A\).
 
-    Il registro di timing modifica il tempo di integrazione degli ADC e quindi influisce sulla sensibilità e sulla risoluzione della misura mentre quello di control determina il guadagno dell'amplificatore. 
-    Per il timing ci siamo imposti un tempo massimo per le 3 misure di 1,5 secondi. Sapendo che \[Timing = (0xFF - 0xATIME) * 2.4ms\] possiamo calcolare \[ATIME_{min} = 0x2A\] 
-    Inizialmente utilizzato il massimo guadagno (x60) e successivamente aumentato il tempo di integrazione fino a raggiungere dei livelli accettabili per tutti i coloti, evitando la saturazione o valori troppo bassi.
-    \[ATIME_{1} = 0xC0 \Rightarrow Timing = 154ms\] 
-    così da avere un buon compromesso tra il tempo di integrazione, la risoluzione e la sensibilità dei valori misurati. 
-    Successivamente abbiamo fatto una prova usando il massimo tempo di integrazione considerato accettabile \[ATIME_{2} = 0x2A \Rightarrow Timing = 510ms\] ed aumentato il guadagno fino ad arrivare ad un valore 
-    né troppo basso né in saturazione ovvero \emph{x16}.
+Abbiamo provato con il massimo guadagno (x60) e abbiamo aumentato il tempo di integrazione fino a raggiungere dei valori con un buon valore massimo e minimo con tutti i colori evitando la saturazione ovvero \(ATIME_{1} = 0xC0\) ovvero Timing = $154ms$ così da avere un buon compromesso tra il tempo di integrazione e la risoluzione e sensibilità dei valori misurati.
 
-    \label{subsubsec:Timing}
-    \begin{table}[H]
+ Successivamente abbiamo fatto una prova usando il massimo tempo di integrazione considerato accettabile (\(ATIME_{2} = 0x2A\)  ovvero Timing = $510ms$) ed aumentato il guadagno fino ad arrivare ad un valore né troppo basso né in saturazione per ogni colore, ovvero (x16).
+    
+\label{sec:Timing}
+    \begin{table}
         \centering
         \begin{tabular}{ccc}
             Registro & Configurazione 1 & Configurazione 2\\
@@ -224,8 +216,8 @@ Non è stato utilizzato lo stato di \textbf{wait} in quanto per la nostra applic
         \caption{Configurazioni}
         \label{tab:configurazioni}
     \end{table}
-
-    \begin{table}[h]
+    
+    \begin{table}
         \centering
         \begin{tabular}{ccc}
             Registro & Configurazione 1 & Configurazione 2\\
@@ -239,8 +231,8 @@ Non è stato utilizzato lo stato di \textbf{wait} in quanto per la nostra applic
         \caption{Cubo rosso}
         \label{tab:cubo_rosso}
     \end{table}
-
-    \begin{table}[h]
+    
+    \begin{table}
         \centering
         \begin{tabular}{ccc}
             Registro & Configurazione 1 & Configurazione 2\\
@@ -253,9 +245,9 @@ Non è stato utilizzato lo stato di \textbf{wait} in quanto per la nostra applic
         \end{tabular}
         \caption{Cubo blu}
         \label{tab:cubo_blu}
-        \end{table}
-
-        \begin{table}[H]
+    \end{table}
+        
+    \begin{table}
         \centering
         \begin{tabular}{ccc}
             Registro & Configurazione 1 & Configurazione 2\\
@@ -269,74 +261,82 @@ Non è stato utilizzato lo stato di \textbf{wait} in quanto per la nostra applic
         \caption{Cubo verde}
         \label{tab:cubo_verde}
     \end{table}
+    
+Vedendo che la differenza tra le due configurazioni era trascurabile, si è optato per l'uso della prima, così da risparmiare un secondo nella misura.
 
-Vedendo che la differenza tra le due configurazioni era trascurabile si è optato per l'uso della prima così da risparmiare un secondo nella misura.
+Un problema riscontrato è stato quello della misura sul cubo blu in quanto il colore dal valore più alto è risultato il verde ed il blu solo il secondo più alto. Provando a cambiare colore con un cartoncino più scuro il colore con il valore più alto risultava invece il rosso a causa del grande assorbimento di luce del cartoncino blu scuro. Questo è dovuto in parte al fatto che la luce del led in dotazione tende un po' verso il giallo (componente rossa più accentuata) e alla maggior responsività alla luce rossa e verde rispetto alla blu.
 
-Un problema riscontrato è stato quello della misura del cubo blu in quanto il colore dal valore più alto è risultato il verde mentre il blu era il secondo più alto. 
+\section{Lettura}
 
-Provando a cambiare colore con un cartoncino più scuro il colore con il valore più alto risultava invece il rosso a causa del grande assorbimento di luce del cartoncino blu scuro, al fatto che la 
-luce del led in dotazione tendeva verso il giallo (componente rossa più accentuata) e alla maggior responsività alla luce rossa e verde rispetto alla blu.
-
-\section{Implementazione}
-
-\subsection{Lettura e scrittura del sensore}
-
-\begin{figure}[H] 
-    \centering
-    \includegraphics[width=0.76\linewidth]{images/Immagini sensore/lettura sensore.png}
-    \caption{lettura sensore}
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/lettura_sensore.png}
+    \caption{Lettura sensore}
+    \includegraphics[width=0.4\textwidth]{Immagini_sensore/scrittura_sensore.png}
+    \caption{Scrittura sensore}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/Immagini sensore/scrittura sensore.png}
-    \caption{scrittura sensore}
-\end{figure}
+Si è deciso di leggere tutti i blocchi ogni volta che fosse stata necessaria la lettura, per evitare dopo la scrittura di dover riscrivere il registro command con il nuovo indirizzo di partenza, visto che il guadagno in termini di tempo era trascurabile.
 
-Si è deciso di leggere tutti i blocchi ogni volta che fosse stata necessaria la lettura per evitare dopo la scrittura di dover riscrivere il registro command con il nuovo indirizzo di partenza visto che
- il guadagno in termini di tempo sarebbe stato trascurabile. Una volta eseguita la lettura di fa la somma pesata dei valori H e L dei registri di ogni colore per avere il valore effettivo a 16 bit.
+Una volta eseguita la lettura di esegue la somma pesata dei valori H e L dei registri di ogni colore per avere il valore effettivo a 16 bit.
 
-\subsection{Macchina a stati}
+\section{Macchina a stati}
+\begin{figure}
 
-\begin{figure}[h] 
-    \centering
-    \includegraphics[width=0.7\linewidth]{images/Immagini sensore/Sensing e macchina a stati.png}
+    \includegraphics[width=\textwidth]{Immagini_sensore/Sensing_e_macchina_a_stati.png}
     \caption{Matlab sensing}
     \end{figure}
-
-\begin{figure}[h]
-    \includegraphics[width=0.8\linewidth]{images/Immagini sensore/sensor_chart.png}
+    
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/sensor_chart.png}
     \caption{Macchina a stati}
     \label{fig:stateflow}
 \end{figure}
 
-Come possiamo vedere nella figura \ref{fig:stateflow} all'accensione viene configurato il sensore e messo colore a 4 per mettere il braccio ad una posizione di default.
+Come possiamo vedere nella figura \ref{fig:stateflow}, all'accensione viene configurato il sensore e messo colore a 4 per mettere il braccio in una posizione di default.
 
-Successivamente si entra in uno stato di \textbf{WAIT} in cui si resettano tutti i contatori. 
+Successivamente si entra in uno stato di wait in cui si resettano tutti i contatori.
 
-Premendo il pulsante \emph{sw2} si passa allo stato di \textbf{RESET} del voter, poi si eseguono tre letture con conseguente decisione del colore per ogni misura. 
+Premendo il pulsante sw2 si passa allo stato di reset del voter.
 
-A quel punto il \textbf{VOTER} decide il colore del cubo se vi sono due colori uguali oppure rifà le misure se sono tutti e tre diversi. Per finire incrementa un contatore ogni 200ms per temporizzare l'attuazione.
+Si eseguono 3 letture con conseguente decisione del colore per ogni misura. A quel punto il voter decide il colore del cubo se vi sono 2 colori uguali oppure rifà le misure se sono tutti e 3 diversi.
 
-$\grave{E}$ stato necessario implementare un voter in quanto durante i test la prima misura poteva risultare diversa soprattutto nel caso del blu per cui si è deciso di applicare una ridondanza a scapito della 
-velocità di misura. Per le ragioni esposte nella sezione \ref{subsubsec:Timing} nel blocco color detection è stato necessario per il riconoscimento del cubo blu stabilire che blu dovesse avere un valore 
-compreso tra quello del verde e quello del rosso.
+Per finire incrementa un contatore ogni 200ms per temporizzare l'attuazione.
 
-\subsection{Test}
+\section{Voter}
 
-Purtroppo non è stato possibile fare il PIL dei blocchi contenenti la comunicazione via I2C in quanto Matlab dava errore in caso di presenza dei blocchi di send e receive via I2C.
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/voter.png}
+    \caption{Voter}
+\end{figure}
 
-\begin{figure}[h] 
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/Immagini sensore/i2c_test.png}
+Per stabilire con accuratezza il colore del cubo è stato necessario implementare un voter in quanto durante i test la misura a volte risultava diversa.
+
+Per cui abbiamo deciso di applicare una ridondanza nelle misure a scapito della velocità di misura.
+
+Per le ragioni esposte nella sezione \ref{sec:Timing}, nel blocco \textbf{color detection} è stato necessario, per il riconoscimento del blu, mettere i valori del blu compresi tra la soglia del verde e la soglia del rosso.
+
+\section{Test}
+
+Purtroppo non è stato possibile fare il PIL dei blocchi contenenti la comunicazione via I2C, in quanto incompatibili.
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/i2c_test.png}
     \caption{Test I2C}
 \end{figure}
-Per eseguire i test della parte di sensore inizialmente è stato fatto un file Matlab che si occupava solo di comunicare con il sensore e mandare i dati ricevuti via uart al pc così da poter valutare i parametri migliori per il sensore.
+
+Per eseguire i test della parte di sensore, inizialmente è stato fatto un file Matlab che si occupava solo di comunicare con il sensore e mandare i dati ricevuti via uart al pc così da poter valutare i parametri migliori per il sensore.
+
 Una volta individuati è stata fatta la macchina a stati e testata prima in MIL e poi usando la uart e il led rgb per il debug.
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{Immagini_sensore/test_stateflow_2.png}
+    \caption{Test macchina a stati}
+\end{figure}
+
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=0.75\linewidth]{images/Immagini sensore/test_stateflow_2.png}
-    \caption{Test macchina a stati}
+    \includegraphics[width=\textwidth]{Immagini_sensore/Matlab_completo.png}
+    \caption{MIL completo}
 \end{figure}
 
 \chapter{Attuazione}
@@ -424,7 +424,7 @@ Un input di debug permette di riportare il braccio in una posizione sicura ed è
 
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=0.75\textwidth]{images/Immagini sensore/Matlab_completo.png}
+    \includegraphics[width=0.75\textwidth]{Immagini_sensore/Matlab_completo.png}
     \caption{MIL completo}
 \end{figure}
 
@@ -441,7 +441,8 @@ Non abbiamo riscontrato problemi oltre all'impossibilità di usare SIL/PIL o i t
 Avevamo preparato delle bozze dei percorsi usando un modello del braccio realizzato e animato su Blender3D. Modificando queste in base alle verifiche abbiamo ottenuto dei percorsi che ci soddisfacessero.
 
 \begin{figure}
-\includegraphics[width=\textwidth]{Blender3D}
+\centering
+\includegraphics[width=0.4\textwidth]{Blender3D}
 \caption{Armatura del braccio su Blender3D}
 \end{figure}
 
@@ -451,11 +452,9 @@ Durante i test PIL, due pezzi stampati 3D per la trasmissione della coppia da se
 
 Il primo guasto è stato dovuto a un blocca di ritardo nell'harness: la condizione iniziale ha fatto piegare il braccio su se stesso all'avvio.
 
-Il secondo guasto è stato dovuto alla base fissata male (svitando le viti si sono rovinati i fori) in seguito alle riparazioni del guasto precedente..
+Il secondo guasto è stato dovuto alla base fissata male (svitando le viti si sono rovinati i fori) in seguito alle riparazioni del guasto precedente.
 
-Altri problemi sono stati riscontrati durante la fase di test del sensore in quanto risultava difficoltoso trovare un materiale che non fosse troppo assorbente o riflettente e un blu non fosse troppo scuro o troppo chiaro così da
-
-poter distinguere il blu in modo affidabile dagli altri colori.
+Altri problemi sono stati riscontrati durante la fase di test del sensore, in quanto risultava difficoltoso trovare un materiale che non fosse troppo assorbente o riflettente e un blu non fosse troppo scuro o troppo chiaro così da poter distinguerlo in modo affidabile dagli altri colori.
 
 \chapter{Conclusione}
 

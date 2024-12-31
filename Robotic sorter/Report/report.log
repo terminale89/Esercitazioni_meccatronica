@@ -1,165 +1,182 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.24)  31 DEC 2024 02:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.27)  31 DEC 2024 17:14
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Meccatronica/Esercitazioni_meccatronica/Robotic sorter/Report/report.tex"
-(d:/Meccatronica/Esercitazioni_meccatronica/Robotic sorter/Report/report.tex
-LaTeX2e <2024-11-01> patch level 1
-L3 programming layer <2024-11-02>
-(c:/texlive/2024/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2024/06/29 v1.4n Standard LaTeX document class
-(c:/texlive/2024/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+**./report.tex
+(report.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-03-30>
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count196
-\c@chapter=\count197
-\c@section=\count198
-\c@subsection=\count199
-\c@subsubsection=\count266
-\c@paragraph=\count267
-\c@subparagraph=\count268
-\c@figure=\count269
-\c@table=\count270
-\abovecaptionskip=\skip49
-\belowcaptionskip=\skip50
-\bibindent=\dimen141
-) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+\KV@toks@=\toks16
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
- (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen142
-\Gin@req@width=\dimen143
-) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2024/11/05 v2.17t AMS math features
-\@mathmargin=\skip51
+Package graphics Info: Driver file: pdftex.def on input line 107.
 
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen144
-)) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks17
+\ex@=\dimen143
+))
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen145
-) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen144
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count271
-LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count272
-\leftroot@=\count273
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count274
-\DOTSCASE@=\count275
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen146
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count276
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count277
-\dotsspace@=\muskip17
-\c@parentequation=\count278
-\dspbrk@lvl=\count279
-\tag@help=\toks19
-\row@=\count280
-\column@=\count281
-\maxfields@=\count282
-\andhelp@=\toks20
-\eqnshift@=\dimen147
-\alignsep@=\dimen148
-\tagshift@=\dimen149
-\tagwidth@=\dimen150
-\totwidth@=\dimen151
-\lineht@=\dimen152
-\@envbody=\toks21
-\multlinegap=\skip52
-\multlinetaggap=\skip53
-\mathdisplay@stack=\toks22
+\inf@bad=\count194
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count195
+\leftroot@=\count196
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count197
+\DOTSCASE@=\count198
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count199
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count266
+\dotsspace@=\muskip16
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks18
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks19
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (c:/texlive/2024/texmf-dist/tex/latex/parskip/parskip.sty
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
- (c:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (c:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+))
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count283
-)) (c:/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen153
-\WF@size=\dimen154
-\c@WF@wrappedlines=\count284
-\WF@box=\box54
-\WF@everypar=\toks23
+\etb@tempcnta=\count272
+)) (C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen152
+\WF@size=\dimen153
+\c@WF@wrappedlines=\count273
+\WF@box=\box53
+\WF@everypar=\toks22
 Package: wrapfig 2003/01/31  v 3.6
-) (c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (c:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen155
-\captionmargin=\dimen156
-\caption@leftmargin=\dimen157
-\caption@rightmargin=\dimen158
-\caption@width=\dimen159
-\caption@indent=\dimen160
-\caption@parindent=\dimen161
-\caption@hangindent=\dimen162
+\caption@tempdima=\dimen154
+\captionmargin=\dimen155
+\caption@leftmargin=\dimen156
+\caption@rightmargin=\dimen157
+\caption@width=\dimen158
+\caption@indent=\dimen159
+\caption@parindent=\dimen160
+\caption@hangindent=\dimen161
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count285
-\c@continuedfloat=\count286
+\c@caption@flags=\count274
+\c@continuedfloat=\count275
 Package caption Info: wrapfig package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count287
+\c@subfigure=\count276
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count288
-) (c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
+\c@subtable=\count277
+) (C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count289
-\float@exts=\toks24
-\float@box=\box55
-\@float@everytoks=\toks25
-\@floatcapt=\box56
-) (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
-\l__pdf_internal_box=\box57
-) (./report.aux)
+\c@float@type=\count278
+\float@exts=\toks23
+\float@box=\box54
+\@float@everytoks=\toks24
+\@floatcapt=\box55
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box56
+) (report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -176,283 +193,293 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
- (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen163
-\scratchbox=\box58
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen164
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks27
-) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+\scratchcounter=\count280
+\scratchdimen=\dimen162
+\scratchbox=\box57
+\nofMPsegments=\count281
+\nofMParguments=\count282
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count283
+\MPscratchDim=\dimen163
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
+\everyMPtoPDFconversion=\toks26
+)
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\marpe\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
+ [1
 
+{C:/Users/marpe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(report.toc [1
 
-[1
-
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./report.toc)
+])
 \tf@toc=\write3
 \openout3 = `report.toc'.
 
-
-
-[1
-
-]
+ [2]
 Chapter 1.
-<./images/Modules.png, id=12, 1221.06187pt x 325.96782pt>
-File: ./images/Modules.png Graphic file (type png)
-<use ./images/Modules.png>
-Package pdftex.def Info: ./images/Modules.png  used on input line 32.
+<./images//Modules.png, id=14, 1221.06187pt x 325.96782pt>
+File: ./images//Modules.png Graphic file (type png)
+<use ./images//Modules.png>
+Package pdftex.def Info: ./images//Modules.png  used on input line 32.
 (pdftex.def)             Requested size: 390.0pt x 104.11287pt.
 
 Overfull \hbox (9.10419pt too wide) in paragraph at lines 40--41
-[]\OT1/cmr/m/n/12 Ottenuti dei pro-totipi fun-zio-nanti dei due mod-uli, ab-bi-amo definito l'interfaccia
+[]\OT1/cmr/m/n/12 Ottenuti dei pro-totipi fun-zio-nanti dei due mod-uli, ab-bi-
+amo definito l'interfaccia
  []
 
+[3
 
-
-[2
-
-]
-
-[3 <./images/Modules.png>]
+] [4 <./images//Modules.png>]
 Chapter 2.
-<images/Immagini sensore/pcb sensore.png, id=22, 534.49687pt x 489.32813pt>
-File: images/Immagini sensore/pcb sensore.png Graphic file (type png)
-<use images/Immagini sensore/pcb sensore.png>
-Package pdftex.def Info: images/Immagini sensore/pcb sensore.png  used on input line 74.
-(pdftex.def)             Requested size: 93.6013pt x 85.68596pt.
-<images/Immagini sensore/I2C_3.3 to 5.png, id=23, 351.56343pt x 191.9672pt>
-File: images/Immagini sensore/I2C_3.3 to 5.png Graphic file (type png)
-<use images/Immagini sensore/I2C_3.3 to 5.png>
-Package pdftex.def Info: images/Immagini sensore/I2C_3.3 to 5.png  used on input line 82.
-(pdftex.def)             Requested size: 195.0pt x 106.47568pt.
-<images/Immagini sensore/Blocco funzionale.png, id=24, 536.0025pt x 201.00093pt>
-File: images/Immagini sensore/Blocco funzionale.png Graphic file (type png)
-<use images/Immagini sensore/Blocco funzionale.png>
-Package pdftex.def Info: images/Immagini sensore/Blocco funzionale.png  used on input line 90.
-(pdftex.def)             Requested size: 156.0006pt x 58.49733pt.
-<images/Immagini sensore/sensore.png, id=25, 230.36063pt x 176.91093pt>
-File: images/Immagini sensore/sensore.png Graphic file (type png)
-<use images/Immagini sensore/sensore.png>
-Package pdftex.def Info: images/Immagini sensore/sensore.png  used on input line 94.
-(pdftex.def)             Requested size: 62.39809pt x 47.91776pt.
+<./images//Immagini_sensore/pcb_sensore.png, id=24, 534.49687pt x 489.32813pt>
+File: ./images//Immagini_sensore/pcb_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/pcb_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/pcb_sensore.png  used on in
+put line 76.
+(pdftex.def)             Requested size: 155.99762pt x 142.81242pt.
+<./images//Immagini_sensore/I2C_3V3_to_5.png, id=25, 351.56343pt x 191.9672pt>
+File: ./images//Immagini_sensore/I2C_3V3_to_5.png Graphic file (type png)
+<use ./images//Immagini_sensore/I2C_3V3_to_5.png>
+Package pdftex.def Info: ./images//Immagini_sensore/I2C_3V3_to_5.png  used on i
+nput line 91.
+(pdftex.def)             Requested size: 155.99762pt x 85.18054pt.
+<./images//Immagini_sensore/Blocco_funzionale.png, id=26, 536.0025pt x 201.0009
+3pt>
+File: ./images//Immagini_sensore/Blocco_funzionale.png Graphic file (type png)
+<use ./images//Immagini_sensore/Blocco_funzionale.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Blocco_funzionale.png  used
+ on input line 100.
+(pdftex.def)             Requested size: 155.99762pt x 58.49733pt.
+<./images//Immagini_sensore/sensore.png, id=27, 230.36063pt x 176.91093pt>
+File: ./images//Immagini_sensore/sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/sensore.png  used on input 
+line 106.
+(pdftex.def)             Requested size: 155.99762pt x 119.80113pt.
+[5
 
+] [6 <./images//Immagini_sensore/pcb_sensore.png> <./images//Immagini_sensore/I
+2C_3V3_to_5.png> <./images//Immagini_sensore/Blocco_funzionale.png> <./images//
+Immagini_sensore/sensore.png>]
+<./images//Immagini_sensore/Responsività_sensore.png, id=41, 224.33812pt x 230
+.36063pt>
+File: ./images//Immagini_sensore/Responsività_sensore.png Graphic file (type p
+ng)
+<use ./images//Immagini_sensore/Responsività_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Responsività_sensore.png  
+used on input line 118.
+(pdftex.def)             Requested size: 155.99762pt x 160.18979pt.
+<./images//Immagini_sensore/I2C.png, id=42, 640.64343pt x 441.14813pt>
+File: ./images//Immagini_sensore/I2C.png Graphic file (type png)
+<use ./images//Immagini_sensore/I2C.png>
+Package pdftex.def Info: ./images//Immagini_sensore/I2C.png  used on input line
+ 127.
+(pdftex.def)             Requested size: 390.0pt x 268.56145pt.
+<./images//Immagini_sensore/registro_di_command.png, id=43, 636.12656pt x 350.8
+1062pt>
+File: ./images//Immagini_sensore/registro_di_command.png Graphic file (type png
+)
+<use ./images//Immagini_sensore/registro_di_command.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_di_command.png  us
+ed on input line 134.
+(pdftex.def)             Requested size: 390.0pt x 215.07545pt.
+<./images//Immagini_sensore/macchina_a_stati.png, id=44, 255.95625pt x 298.8665
+6pt>
+File: ./images//Immagini_sensore/macchina_a_stati.png Graphic file (type png)
+<use ./images//Immagini_sensore/macchina_a_stati.png>
+Package pdftex.def Info: ./images//Immagini_sensore/macchina_a_stati.png  used 
+on input line 146.
+(pdftex.def)             Requested size: 155.99762pt x 182.14871pt.
+ [7 <./images//Immagini_sensore/Responsività_sensore.png>] [8 <./images//Immag
+ini_sensore/I2C.png> <./images//Immagini_sensore/registro_di_command.png>]
+<./images//Immagini_sensore/Indirizzi_sensore.png, id=54, 211.91672pt x 134.377
+03pt>
+File: ./images//Immagini_sensore/Indirizzi_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/Indirizzi_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Indirizzi_sensore.png  used
+ on input line 155.
+(pdftex.def)             Requested size: 390.0pt x 247.31003pt.
+ [9 <./images//Immagini_sensore/macchina_a_stati.png>]
+<./images//Immagini_sensore/registro_enable.png, id=58, 764.10469pt x 362.85562
+pt>
+File: ./images//Immagini_sensore/registro_enable.png Graphic file (type png)
+<use ./images//Immagini_sensore/registro_enable.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_enable.png  used o
+n input line 184.
+(pdftex.def)             Requested size: 390.0pt x 185.2034pt.
+ [10 <./images//Immagini_sensore/Indirizzi_sensore.png>]
+<./images//Immagini_sensore/registro_timing.png, id=63, 651.93562pt x 222.07968
+pt>
+File: ./images//Immagini_sensore/registro_timing.png Graphic file (type png)
+<use ./images//Immagini_sensore/registro_timing.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_timing.png  used o
+n input line 194.
+(pdftex.def)             Requested size: 390.0pt x 132.85574pt.
+<./images//Immagini_sensore/registro_control.png, id=64, 638.385pt x 226.59656p
+t>
+File: ./images//Immagini_sensore/registro_control.png Graphic file (type png)
+<use ./images//Immagini_sensore/registro_control.png>
+Package pdftex.def Info: ./images//Immagini_sensore/registro_control.png  used 
+on input line 196.
+(pdftex.def)             Requested size: 390.0pt x 138.43114pt.
+ [11 <./images//Immagini_sensore/registro_enable.png>] [12 <./images//Immagini_
+sensore/registro_timing.png> <./images//Immagini_sensore/registro_control.png>]
+ [13]
+<./images//Immagini_sensore/lettura_sensore.png, id=79, 609.02531pt x 207.77625
+pt>
+File: ./images//Immagini_sensore/lettura_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/lettura_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/lettura_sensore.png  used o
+n input line 272.
+(pdftex.def)             Requested size: 390.0pt x 133.05559pt.
+<./images//Immagini_sensore/scrittura_sensore.png, id=80, 718.93594pt x 681.295
+32pt>
+File: ./images//Immagini_sensore/scrittura_sensore.png Graphic file (type png)
+<use ./images//Immagini_sensore/scrittura_sensore.png>
+Package pdftex.def Info: ./images//Immagini_sensore/scrittura_sensore.png  used
+ on input line 274.
+(pdftex.def)             Requested size: 155.99762pt x 147.82707pt.
+<./images//Immagini_sensore/Sensing_e_macchina_a_stati.png, id=81, 1196.21906pt
+ x 476.53032pt>
+File: ./images//Immagini_sensore/Sensing_e_macchina_a_stati.png Graphic file (t
+ype png)
+<use ./images//Immagini_sensore/Sensing_e_macchina_a_stati.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Sensing_e_macchina_a_stati.
+png  used on input line 285.
+(pdftex.def)             Requested size: 390.0pt x 155.36496pt.
+<./images//Immagini_sensore/sensor_chart.png, id=82, 706.89093pt x 259.7203pt>
+File: ./images//Immagini_sensore/sensor_chart.png Graphic file (type png)
+<use ./images//Immagini_sensore/sensor_chart.png>
+Package pdftex.def Info: ./images//Immagini_sensore/sensor_chart.png  used on i
+nput line 290.
+(pdftex.def)             Requested size: 390.0pt x 143.29045pt.
+<./images//Immagini_sensore/voter.png, id=83, 706.89093pt x 259.7203pt>
+File: ./images//Immagini_sensore/voter.png Graphic file (type png)
+<use ./images//Immagini_sensore/voter.png>
+Package pdftex.def Info: ./images//Immagini_sensore/voter.png  used on input li
+ne 308.
+(pdftex.def)             Requested size: 390.0pt x 143.29045pt.
+ [14] [15 <./images//Immagini_sensore/lettura_sensore.png> <./images//Immagini_
+sensore/scrittura_sensore.png> <./images//Immagini_sensore/Sensing_e_macchina_a
+_stati.png>]
+<./images//Immagini_sensore/i2c_test.png, id=90, 1535.7375pt x 766.36313pt>
+File: ./images//Immagini_sensore/i2c_test.png Graphic file (type png)
+<use ./images//Immagini_sensore/i2c_test.png>
+Package pdftex.def Info: ./images//Immagini_sensore/i2c_test.png  used on input
+ line 323.
+(pdftex.def)             Requested size: 390.0pt x 194.61899pt.
 
-[4
-
- <./images/Immagini sensore/pcb sensore.png> <./images/Immagini sensore/I2C_3.3 to 5.png>]
-<images/Immagini sensore/Responsività sensore.png, id=33, 224.33812pt x 230.36063pt>
-File: images/Immagini sensore/Responsività sensore.png Graphic file (type png)
-<use images/Immagini sensore/Responsività sensore.png>
-Package pdftex.def Info: images/Immagini sensore/Responsività sensore.png  used on input line 110.
-(pdftex.def)             Requested size: 97.5pt x 100.11465pt.
-<images/Immagini sensore/I2C.png, id=34, 640.64343pt x 441.14813pt>
-File: images/Immagini sensore/I2C.png Graphic file (type png)
-<use images/Immagini sensore/I2C.png>
-Package pdftex.def Info: images/Immagini sensore/I2C.png  used on input line 121.
-(pdftex.def)             Requested size: 272.99881pt x 187.98695pt.
-
-
-[5 <./images/Immagini sensore/Blocco funzionale.png> <./images/Immagini sensore/sensore.png> <./images/Immagini sensore/Responsività sensore.png>]
-<images/Immagini sensore/registro di command.png, id=41, 636.12656pt x 350.81062pt>
-File: images/Immagini sensore/registro di command.png Graphic file (type png)
-<use images/Immagini sensore/registro di command.png>
-Package pdftex.def Info: images/Immagini sensore/registro di command.png  used on input line 132.
-(pdftex.def)             Requested size: 272.99881pt x 150.55121pt.
-
-
-[6 <./images/Immagini sensore/I2C.png> <./images/Immagini sensore/registro di command.png>]
-<images/Immagini sensore/macchina a stati.png, id=48, 255.95625pt x 298.86656pt>
-File: images/Immagini sensore/macchina a stati.png Graphic file (type png)
-<use images/Immagini sensore/macchina a stati.png>
-Package pdftex.def Info: images/Immagini sensore/macchina a stati.png  used on input line 145.
-(pdftex.def)             Requested size: 136.50238pt x 159.3881pt.
-<images/Immagini sensore/Indirizzi sensore.png, id=49, 211.91672pt x 134.37703pt>
-File: images/Immagini sensore/Indirizzi sensore.png Graphic file (type png)
-<use images/Immagini sensore/Indirizzi sensore.png>
-Package pdftex.def Info: images/Immagini sensore/Indirizzi sensore.png  used on input line 157.
-(pdftex.def)             Requested size: 195.0pt x 123.65501pt.
+[16 <./images//Immagini_sensore/sensor_chart.png> <./images//Immagini_sensore/v
+oter.png>]
+<./images//Immagini_sensore/test_stateflow_2.png, id=96, 2232.84187pt x 660.969
+38pt>
+File: ./images//Immagini_sensore/test_stateflow_2.png Graphic file (type png)
+<use ./images//Immagini_sensore/test_stateflow_2.png>
+Package pdftex.def Info: ./images//Immagini_sensore/test_stateflow_2.png  used 
+on input line 332.
+(pdftex.def)             Requested size: 390.0pt x 115.44948pt.
+<./images//Immagini_sensore/Matlab_completo.png, id=97, 2363.07843pt x 508.1484
+4pt>
+File: ./images//Immagini_sensore/Matlab_completo.png Graphic file (type png)
+<use ./images//Immagini_sensore/Matlab_completo.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Matlab_completo.png  used o
+n input line 338.
+(pdftex.def)             Requested size: 390.0pt x 83.86412pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/Immagini sensore/registro enable.png, id=50, 764.10469pt x 362.85562pt>
-File: images/Immagini sensore/registro enable.png Graphic file (type png)
-<use images/Immagini sensore/registro enable.png>
-Package pdftex.def Info: images/Immagini sensore/registro enable.png  used on input line 185.
-(pdftex.def)             Requested size: 253.49762pt x 120.37944pt.
-
-
-[7 <./images/Immagini sensore/macchina a stati.png>]
-
-[8 <./images/Immagini sensore/Indirizzi sensore.png> <./images/Immagini sensore/registro enable.png>]
-<images/Immagini sensore/registro timing.png, id=58, 651.93562pt x 222.07968pt>
-File: images/Immagini sensore/registro timing.png Graphic file (type png)
-<use images/Immagini sensore/registro timing.png>
-Package pdftex.def Info: images/Immagini sensore/registro timing.png  used on input line 200.
-(pdftex.def)             Requested size: 253.49762pt x 86.35318pt.
-<images/Immagini sensore/registro control.png, id=59, 638.385pt x 226.59656pt>
-File: images/Immagini sensore/registro control.png Graphic file (type png)
-<use images/Immagini sensore/registro control.png>
-Package pdftex.def Info: images/Immagini sensore/registro control.png  used on input line 202.
-(pdftex.def)             Requested size: 253.49762pt x 89.98007pt.
-
-
-[9 <./images/Immagini sensore/registro timing.png> <./images/Immagini sensore/registro control.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[10]
-<images/Immagini sensore/lettura sensore.png, id=70, 609.02531pt x 207.77625pt>
-File: images/Immagini sensore/lettura sensore.png Graphic file (type png)
-<use images/Immagini sensore/lettura sensore.png>
-Package pdftex.def Info: images/Immagini sensore/lettura sensore.png  used on input line 286.
-(pdftex.def)             Requested size: 296.39786pt x 101.12326pt.
-<images/Immagini sensore/scrittura sensore.png, id=71, 718.93594pt x 681.29532pt>
-File: images/Immagini sensore/scrittura sensore.png Graphic file (type png)
-<use images/Immagini sensore/scrittura sensore.png>
-Package pdftex.def Info: images/Immagini sensore/scrittura sensore.png  used on input line 292.
-(pdftex.def)             Requested size: 234.00238pt x 221.751pt.
-
-
-[11 <./images/Immagini sensore/lettura sensore.png>]
-<images/Immagini sensore/Sensing e macchina a stati.png, id=75, 1196.21906pt x 476.53032pt>
-File: images/Immagini sensore/Sensing e macchina a stati.png Graphic file (type png)
-<use images/Immagini sensore/Sensing e macchina a stati.png>
-Package pdftex.def Info: images/Immagini sensore/Sensing e macchina a stati.png  used on input line 303.
-(pdftex.def)             Requested size: 272.99881pt x 108.74893pt.
-<images/Immagini sensore/sensor_chart.png, id=76, 706.89093pt x 259.7203pt>
-File: images/Immagini sensore/sensor_chart.png Graphic file (type png)
-<use images/Immagini sensore/sensor_chart.png>
-Package pdftex.def Info: images/Immagini sensore/sensor_chart.png  used on input line 308.
-(pdftex.def)             Requested size: 312.00119pt x 114.63396pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[12 <./images/Immagini sensore/scrittura sensore.png> <./images/Immagini sensore/Sensing e macchina a stati.png>]
-<images/Immagini sensore/i2c_test.png, id=81, 1535.7375pt x 766.36313pt>
-File: images/Immagini sensore/i2c_test.png Graphic file (type png)
-<use images/Immagini sensore/i2c_test.png>
-Package pdftex.def Info: images/Immagini sensore/i2c_test.png  used on input line 331.
-(pdftex.def)             Requested size: 234.00238pt x 116.76204pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/Immagini sensore/test_stateflow_2.png, id=82, 2232.84187pt x 660.96938pt>
-File: images/Immagini sensore/test_stateflow_2.png Graphic file (type png)
-<use images/Immagini sensore/test_stateflow_2.png>
-Package pdftex.def Info: images/Immagini sensore/test_stateflow_2.png  used on input line 338.
-(pdftex.def)             Requested size: 292.5pt x 86.5846pt.
-
-
-[13 <./images/Immagini sensore/sensor_chart.png>]
-
-[14 <./images/Immagini sensore/i2c_test.png> <./images/Immagini sensore/test_stateflow_2.png>]
+[17 <./images//Immagini_sensore/i2c_test.png> <./images//Immagini_sensore/test_
+stateflow_2.png>] [18 <./images//Immagini_sensore/Matlab_completo.png>]
 Chapter 3.
-<./images/Complete_attuation.png, id=90, 1317.42188pt x 252.19218pt>
-File: ./images/Complete_attuation.png Graphic file (type png)
-<use ./images/Complete_attuation.png>
-Package pdftex.def Info: ./images/Complete_attuation.png  used on input line 355.
+<./images//Complete_attuation.png, id=106, 1317.42188pt x 252.19218pt>
+File: ./images//Complete_attuation.png Graphic file (type png)
+<use ./images//Complete_attuation.png>
+Package pdftex.def Info: ./images//Complete_attuation.png  used on input line 3
+55.
 (pdftex.def)             Requested size: 390.0pt x 74.65771pt.
-
-
-[15
-
- <./images/Complete_attuation.png>]
-<./images/Path_structure.png, id=95, 526.96875pt x 293.59688pt>
-File: ./images/Path_structure.png Graphic file (type png)
-<use ./images/Path_structure.png>
-Package pdftex.def Info: ./images/Path_structure.png  used on input line 374.
-(pdftex.def)             Requested size: 390.0pt x 217.29411pt.
-
-
-[16{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/Path_structure.png>]
-Overfull \hbox (12.7148pt too wide) in paragraph at lines 390--391
-[]\OT1/cmr/m/n/12 Il blocco \OT1/cmr/bx/n/12 PWM-driver \OT1/cmr/m/n/12 im-posta le us-cite PWM a par-tire dagli an-goli desiderati. 
- []
-
-
-
-[17]
-<./images/Harness.png, id=104, 1044.15094pt x 472.01344pt>
-File: ./images/Harness.png Graphic file (type png)
-<use ./images/Harness.png>
-Package pdftex.def Info: ./images/Harness.png  used on input line 419.
-(pdftex.def)             Requested size: 390.0pt x 176.29877pt.
-
-
-[18 <./images/Harness.png>]
-Chapter 4.
-<images/Immagini sensore/Matlab_completo.png, id=110, 2363.07843pt x 508.14844pt>
-File: images/Immagini sensore/Matlab_completo.png Graphic file (type png)
-<use images/Immagini sensore/Matlab_completo.png>
-Package pdftex.def Info: images/Immagini sensore/Matlab_completo.png  used on input line 427.
-(pdftex.def)             Requested size: 292.5pt x 62.89809pt.
-<./images/Blender3D.png, id=111, 318.43968pt x 313.17pt>
-File: ./images/Blender3D.png Graphic file (type png)
-<use ./images/Blender3D.png>
-Package pdftex.def Info: ./images/Blender3D.png  used on input line 444.
-(pdftex.def)             Requested size: 390.0pt x 383.54341pt.
-
-
 [19
 
- <./images/Immagini sensore/Matlab_completo.png>]
+ <./images//Complete_attuation.png>]
+<./images//Path_structure.png, id=111, 526.96875pt x 293.59688pt>
+File: ./images//Path_structure.png Graphic file (type png)
+<use ./images//Path_structure.png>
+Package pdftex.def Info: ./images//Path_structure.png  used on input line 374.
+(pdftex.def)             Requested size: 390.0pt x 217.29411pt.
+ [20 <./images//Path_structure.png>]
+Overfull \hbox (12.7148pt too wide) in paragraph at lines 390--391
+[]\OT1/cmr/m/n/12 Il blocco \OT1/cmr/bx/n/12 PWM-driver \OT1/cmr/m/n/12 im-post
+a le us-cite PWM a par-tire dagli an-goli desiderati. 
+ []
 
-[20 <./images/Blender3D.png>]
+[21]
+<./images//Harness.png, id=119, 1044.15094pt x 472.01344pt>
+File: ./images//Harness.png Graphic file (type png)
+<use ./images//Harness.png>
+Package pdftex.def Info: ./images//Harness.png  used on input line 419.
+(pdftex.def)             Requested size: 390.0pt x 176.29877pt.
+ [22 <./images//Harness.png>]
+Chapter 4.
+File: ./images//Immagini_sensore/Matlab_completo.png Graphic file (type png)
+<use ./images//Immagini_sensore/Matlab_completo.png>
+Package pdftex.def Info: ./images//Immagini_sensore/Matlab_completo.png  used o
+n input line 427.
+(pdftex.def)             Requested size: 292.5pt x 62.89809pt.
+<./images//Blender3D.png, id=124, 318.43968pt x 313.17pt>
+File: ./images//Blender3D.png Graphic file (type png)
+<use ./images//Blender3D.png>
+Package pdftex.def Info: ./images//Blender3D.png  used on input line 445.
+(pdftex.def)             Requested size: 155.99762pt x 153.4164pt.
+[23
+
+] [24 <./images//Blender3D.png>]
 Chapter 5.
-
-
-[21
+[25
 
 ]
 Chapter 6.
+[26
 
-
-[22
-
-] (./report.aux)
- ***********
-LaTeX2e <2024-11-01> patch level 1
-L3 programming layer <2024-11-02>
- ***********
- ) 
+] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4582 strings out of 473329
- 80558 string characters out of 5723856
- 471217 words of memory out of 5000000
- 27693 multiletter control sequences out of 15000+600000
- 565952 words of font info for 63 fonts, out of 8000000 for 9000
+ 4645 strings out of 476331
+ 85041 string characters out of 5787765
+ 1861660 words of memory out of 5000000
+ 25039 multiletter control sequences out of 15000+600000
+ 519563 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,9n,77p,586b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on report.pdf (23 pages, 2112990 bytes).
+ 67i,9n,77p,585b,311s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\marpe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm1200.pk><C:/Users/marpe/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb><C:/Users/marpe/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/marpe/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/marpe/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/marpe/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/marpe
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/User
+s/marpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/Users/marpe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mti12.pfb>
+Output written on report.pdf (27 pages, 2275196 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
