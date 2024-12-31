@@ -1,0 +1,25 @@
+\contentsline {chapter}{\numberline {1}Introduzione}{2}{}%
+\contentsline {section}{\numberline {1.1}Divisione delle funzioni}{2}{}%
+\contentsline {section}{\numberline {1.2}Modalità d'uso}{3}{}%
+\contentsline {chapter}{\numberline {2}Percezione}{4}{}%
+\contentsline {section}{\numberline {2.1}Sensore di colore}{4}{}%
+\contentsline {section}{\numberline {2.2}TAOS TCS3472}{5}{}%
+\contentsline {subsection}{\numberline {2.2.1}I2C}{5}{}%
+\contentsline {subsection}{\numberline {2.2.2}Macchina a Stati sensore}{7}{}%
+\contentsline {subsection}{\numberline {2.2.3}Registri}{7}{}%
+\contentsline {subsubsection}{Valori scelti}{7}{}%
+\contentsline {subsubsection}{Command}{7}{}%
+\contentsline {subsubsection}{Enable}{8}{}%
+\contentsline {subsubsection}{Timing e Control}{9}{}%
+\contentsline {section}{\numberline {2.3}Implementazione}{11}{}%
+\contentsline {subsection}{\numberline {2.3.1}Lettura e scrittura del sensore}{11}{}%
+\contentsline {subsection}{\numberline {2.3.2}Macchina a stati}{12}{}%
+\contentsline {subsection}{\numberline {2.3.3}Test}{13}{}%
+\contentsline {chapter}{\numberline {3}Attuazione}{15}{}%
+\contentsline {section}{\numberline {3.1}Principio di funzionamento}{15}{}%
+\contentsline {section}{\numberline {3.2}Reimpostazione periodica del PWM}{17}{}%
+\contentsline {section}{\numberline {3.3}Cinematica inversa}{17}{}%
+\contentsline {section}{\numberline {3.4}Test}{18}{}%
+\contentsline {chapter}{\numberline {4}Verifica finale}{19}{}%
+\contentsline {chapter}{\numberline {5}Problemi durante lo sviluppo}{21}{}%
+\contentsline {chapter}{\numberline {6}Conclusione}{22}{}%
